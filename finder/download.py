@@ -12,40 +12,43 @@ def removeNonNumeric(s: str) -> str:
     return re.sub("[^0-9]*", '', s)
 
 HMSFMTSTRING = r"{H:02}:{M:02}:{S:02}"
+def clip_minsec(hms: List[str]) -> str:
 
-def getTimestamp(s: str) -> str:
+    ss, mm, hh = hms 
+    mm += ss // 60 
+    hh += mm // 60 
+    
+    return HMSFMTSTRING.format(
+        S=(ss % 60), M=(mm % 60), H=hh
+    )
 
-    # pad with leading zeroes
-    s = removeNonNumeric(s)
-
+def extract_hms(s: str, n: int) -> str:
+        
     ssmmhh = [0]*3
-    n = len(s)
     for i in range(0, 6, 2):
-        if i+2 >= n: 
+        if i >= n: 
             break 
-        elif i > 2: 
+        elif i > 2 or n < i+2: 
             ssmmhh[i // 2] = int(
                 s[:n-i]
             )
+            break 
         else:
             ssmmhh[i // 2] = int(
                 s[n-(i+2):n-i]
             )
-        print(ssmmhh)
+
+    return clip_minsec(ssmmhh)
+
+def getTimestamp(s: str) -> str:  
     
-    return HMSFMTSTRING.format(
-        S=ssmmhh[0], M=ssmmhh[1], H=ssmmhh[2]
-    )
+    s = removeNonNumeric(s)
+    n = len(s)
     
-    try:
-        # return "{H}:{M}:{S}".format(
-        #     H=t.hours
-        # )
-        return t 
-        return datetime.strftime(t, "%H:%M:%S")
-    except ValueError as e:
-        print(e)
-        return None
+    if n < 1:
+        raise ValueError(f"Empty timestamp: {s}")
+      
+    return extract_hms(s, n)
 
 
 def run_cmd(cmd: List[str], concurrent=True, **kwargs) -> Tuple[str, str]:
@@ -111,7 +114,7 @@ def get_cmd(
                 run (bool, optional): whether to run the command via `subprocess.Popen`. Defaults to True.
 
     Returns:
-                str: command line input
+                Tuple[str, str]: command line input, filename                 
     """
 
     validators.url(url)

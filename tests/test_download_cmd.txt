@@ -1,0 +1,2 @@
+'yt-dlp -f 139 -o "C:\\Users\\delbe\\Documents\\CodeRepositories\\Miscellaneous\\YouTubeClipFinder\\data\\H8a2odhdruY.m4a*" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:01:40 -to 00:01:50" https://youtu.be/H8a2odhdruY'
+'C:\\Users\\delbe\\Documents\\CodeRepositories\\Miscellaneous\\YouTubeClipFinder\\data\\H8a2odhdruY.m4a*'
