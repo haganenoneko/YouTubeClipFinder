@@ -3,7 +3,7 @@ import re
 import logging
 from typing import List, Tuple
 from subprocess import call, Popen
-from datetime import datetime
+from datetime import datetime, timedelta
 import validators
 
 
@@ -11,19 +11,40 @@ def removeNonNumeric(s: str) -> str:
     """Remove non-numeric characters from `s`"""
     return re.sub("[^0-9]*", '', s)
 
+HMSFMTSTRING = r"{H:02}:{M:02}:{S:02}"
 
 def getTimestamp(s: str) -> str:
 
     # pad with leading zeroes
-    n = 6 - len(s)
-    if n > 0:
-        s = '0'*n + s
+    s = removeNonNumeric(s)
 
+    ssmmhh = [0]*3
+    n = len(s)
+    for i in range(0, 6, 2):
+        if i+2 >= n: 
+            break 
+        elif i > 2: 
+            ssmmhh[i // 2] = int(
+                s[:n-i]
+            )
+        else:
+            ssmmhh[i // 2] = int(
+                s[n-(i+2):n-i]
+            )
+        print(ssmmhh)
+    
+    return HMSFMTSTRING.format(
+        S=ssmmhh[0], M=ssmmhh[1], H=ssmmhh[2]
+    )
+    
     try:
-        s = removeNonNumeric(s)
-        t = datetime.strptime(s, "%H%M%S")
+        # return "{H}:{M}:{S}".format(
+        #     H=t.hours
+        # )
+        return t 
         return datetime.strftime(t, "%H:%M:%S")
-    except ValueError:
+    except ValueError as e:
+        print(e)
         return None
 
 
@@ -63,7 +84,7 @@ def get_filename(url: str, loc: Path = None) -> str:
         files = list(files)
 
         logging.info(f"{fn.name} already exists.\n{files}")
-        
+
         n = len(files) + 1
         fn = f"{fn.parent}/{fn.stem}_{n}.{fn.suffix}"
 
@@ -119,4 +140,4 @@ def get_cmd(
         raise TypeError(f"All arguments to `Popen` must be strings:\n{cmd}")
 
     logging.info(f"\n\nffmpeg cmd:\n{cmd}")
-    return cmd, filename 
+    return cmd, filename

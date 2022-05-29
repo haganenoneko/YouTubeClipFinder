@@ -1,18 +1,21 @@
 import math
-import time 
+import time
 import yt_dlp
 import logging
-import numpy as np 
-import matplotlib.pyplot as plt 
+import numpy as np
+import matplotlib.pyplot as plt
 from typing import List, Tuple
+
 
 def seconds2str(secs: int, fmt=r"%H:%M:%S") -> str:
     return time.strftime(fmt, time.gmtime(secs))
 
+
 vec_seconds2str = np.vectorize(seconds2str)
 
+
 def get_video_duration(
-    url: str) -> Tuple[int, str]:
+        url: str) -> Tuple[int, str]:
     """Get duration of a YouTube video
 
     Args:
@@ -28,37 +31,39 @@ def get_video_duration(
 
     return seconds, seconds2str(seconds)
 
+
 def get_bin_edges(
-    i: int, 
-    start: int, 
-    nbins: int, 
-    rbinedges: List[int],
-    binorder: str = 'mirrored') -> Tuple[int, int]:
-    
+        i: int,
+        start: int,
+        nbins: int,
+        rbinedges: List[int],
+        binorder: str = 'mirrored') -> Tuple[int, int]:
+
     if binorder == 'mirrored':
         ind = (i // 2) * (-1)**(i % 2)
-        ind += start 
+        ind += start
     else:
-        ind = i 
+        ind = i
 
-    if ind >= nbins: 
-        return None  
+    if ind >= nbins:
+        return None
 
     left, right = rbinedges[ind-1] + 1, rbinedges[ind]
-    
-    if left > right: 
-        raise ValueError          
+
+    if left > right:
+        raise ValueError
     else:
         return left, right
-    
+
+
 def get_bins(
-    duration: int, 
-    nbins: int=10,
-    binorder: str='mirrored',
-    min_binwidth: int=30,
-    max_binwidth: int=120, 
-    clip_edges: int=60, 
-    plot=False) -> np.ndarray:
+        duration: int,
+        nbins: int = 10,
+        binorder: str = 'mirrored',
+        min_binwidth: int = 30,
+        max_binwidth: int = 120,
+        clip_edges: int = 60,
+        plot=False) -> np.ndarray:
     """Get bins containing start and stop times that cover the given duration
 
     Args:
@@ -74,17 +79,18 @@ def get_bins(
     """
 
     if binorder not in ['linear', 'mirrored']:
-        raise ValueError(f"`binorder` must be one of 'linear' or 'mirrored', not {binorder}")
+        raise ValueError(
+            f"`binorder` must be one of 'linear' or 'mirrored', not {binorder}")
 
-    bins: List[List[int]] = [] 
-    
+    bins: List[List[int]] = []
+
     if clip_edges > 0:
         duration -= 2*clip_edges
 
     binwidth = math.floor(duration / nbins)
-    
+
     if binwidth < min_binwidth:
-        binwidth = min_binwidth 
+        binwidth = min_binwidth
     elif binwidth > max_binwidth:
         binwidth = max_binwidth
 
@@ -100,28 +106,28 @@ def get_bins(
 
     if plot:
         _, ax = plt.subplots()
-        
-        text_kw = dict( 
+
+        text_kw = dict(
             fontdict=dict(ha='center', va='bottom'),
             transform=ax.transData
         )
 
     for i in range(1, nbins+1):
-        
+
         try:
             edges = get_bin_edges(
                 i, ind0, nbins, rbinedges, binorder=binorder
             )
         except ValueError:
-            break 
+            break
 
         if edges is None:
-            continue 
-        
+            continue
+
         bins.append(edges)
-        
-        if not plot: 
-            continue 
+
+        if not plot:
+            continue
 
         ax.plot(edges, [i]*2, )
         ax.text(sum(edges)/2, i, str(i), **text_kw)
@@ -133,10 +139,10 @@ def get_bins(
 
     if plot:
         plt.show()
-    
+
     return np.array(bins) + clip_edges
+
 
 def bins2str(bin_arr: np.ndarray) -> np.ndarray:
     print(f"Min Time: {np.min(bin_arr):<8} Max Time: {np.max(bin_arr):<8}")
     return vec_seconds2str(bin_arr)
-
