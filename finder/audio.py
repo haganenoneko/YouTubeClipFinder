@@ -1,11 +1,14 @@
 import math 
 import logging
+from multiprocessing.sharedctypes import Value
 import audiofile
 import numpy as np 
 from pathlib import Path 
 import matplotlib.pyplot as plt 
-from typing import Tuple, Union  
-from scipy.signal import correlate
+from typing import Tuple, Union, List
+from scipy.signal import correlate, correlation_lags
+
+from main import InvalidArgumentException
 
 def read_audio_data(
     name: str, 
@@ -64,7 +67,8 @@ def findsignal(
     data: np.ndarray, 
     query: np.ndarray, 
     rate: int, 
-    how='whole', 
+    how_argmax='whole', 
+    how_t0='query',
     plot=False) -> Tuple[int, int]:
     """Find start and stop times of a `query` signal inside a `data` signal
 
@@ -72,24 +76,43 @@ def findsignal(
         data (np.ndarray): data signal
         query (np.ndarray): query signal
         rate (int): sampling rate, number of data points per second.
-        how (str, optional): how to compute the `argmax` of cross-correlated `data` and `query`. Defaults to 'whole'.
+        how_argmax (str, optional): how to compute the `argmax` of cross-correlated `data` and `query`. Defaults to 'whole'.
+            - `whole` : `argmax` over the entire cross-correlation array
+            - `inds` : pre-computes indices where cross-correlation is above 0.5, then finds the `argmax` over these
+        how_t0 (str, optional): how to compute start time. Defaults to 'query'.
+            - `query`: `stop time - query duration = start time`. 
+            - `lags` : the start time is the `argmax` of cross-correlation lags.
         plot (bool, optional): whether to plot results. Defaults to False.
 
     Returns:
         Tuple[int, int]: start and stop times
     """    
     
+    if how_t0 not in ['query', 'lags']:
+        raise InvalidArgumentException(
+            'how_t0', how_t0, ['query', 'lags']
+        )
+    if how_argmax not in ['whole', 'inds']:
+        raise InvalidArgumentException(
+            'how_argmax', how_argmax, ['whole', 'inds']
+        )
+
     corr = correlate(data, query, method='fft')
 
-    if how == 'inds':
+    if how_argmax == 'inds':
         inds = np.where(corr > 0.5)[0]
         t1 = inds[np.argmax(corr[inds])] 
     else:
         t1 = np.argmax(corr)
     
     t1 = math.ceil(t1/rate)
-    dt = int(query.shape[0] / rate)
-    t0 = t1 - dt 
+
+    if how_t0 == 'query':
+        dt = int(query.shape[0] / rate)
+        t0 = t1 - dt 
+    else:
+        lags = correlation_lags(data.size, query.size)
+        t0 = int(lags[t1])
 
     msg = f"Start: {t0:>10} Stop: {t1:<10}"
     logging.info(msg)

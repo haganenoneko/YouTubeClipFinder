@@ -13,6 +13,16 @@ logging.basicConfig(
     level=logging.DEBUG
 )
 
+class InvalidArgumentException(ValueError):
+    def __init__(
+        self, 
+        parname: str, 
+        val: str, 
+        allowed: List[str]) -> None:
+        super().__init__(
+            f"`{parname}` must be one of {allowed}, not {val}"
+        )
+
 def get_video_duration(url: str, fmt=None) -> Union[int, str]:
     meta: dict = yt_dlp.YoutubeDL().extract_info(
         url, download=False

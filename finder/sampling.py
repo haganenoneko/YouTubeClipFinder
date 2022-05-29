@@ -116,5 +116,3 @@ def bins2str(bins: List[List[int]]) -> np.ndarray:
     print(f"Min Time: {np.min(bin_arr):<8} Max Time: {np.max(bin_arr):<8}")
     return vec_seconds2str(bin_arr)
 
-# dur_int, dur_str = get_video_duration(
-#     'https://youtu.be/oHP7u5zHYSY')
