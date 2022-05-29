@@ -48,23 +48,29 @@ def get_filename(url: str, loc: Path = None) -> str:
         TypeError: Raised if `loc` is not `NoneType` or `Path` type.
     """
     if loc is None:
-        filename = url.split("/")[-1] + '.m4a'
+        fn = url.split("/")[-1] + '.m4a'
     elif isinstance(loc, Path):
-        filename = loc / "{}.m4a".format(url.split("/")[-1])
+        fn = loc / "{}.m4a*".format(
+            url.split("/")[-1]
+        )
     else:
         raise TypeError(
             f"Argument `loc` should be NoneType or Path, not {type(loc)}"
         )
 
-    if isinstance(filename, Path) and filename.is_file():
-        files = list(filename.parent.glob(f"{filename.stem}*"))
-        logging.info(f"{filename.name} already exists.\n{files}")
-        n = len(files) + 1
-        filename = f"{filename.parent}/{filename.stem}_{n}.{filename.suffix}"
-    else:
-        filename = str(filename)
+    if isinstance(fn, Path) and fn.is_file():
+        files = fn.parent.glob(f"{fn.stem}*")
+        files = list(files)
 
-    return filename
+        logging.info(f"{fn.name} already exists.\n{files}")
+        
+        n = len(files) + 1
+        fn = f"{fn.parent}/{fn.stem}_{n}.{fn.suffix}"
+
+    else:
+        fn = str(fn)
+
+    return fn
 
 
 def get_cmd(
@@ -72,8 +78,7 @@ def get_cmd(
         start: str,
         stop: str,
         fmt: int,
-        loc: Path = None,
-        run=True) -> str:
+        loc: Path = None) -> Tuple[str, str]:
     """Create command line input for downloading YouTube video
 
     Args:
@@ -114,4 +119,4 @@ def get_cmd(
         raise TypeError(f"All arguments to `Popen` must be strings:\n{cmd}")
 
     logging.info(f"\n\nffmpeg cmd:\n{cmd}")
-    return cmd
+    return cmd, filename 
