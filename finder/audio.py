@@ -1,6 +1,5 @@
 import math 
 import logging
-from multiprocessing.sharedctypes import Value
 import audiofile
 import numpy as np 
 from pathlib import Path 
@@ -77,11 +76,15 @@ def findsignal(
         query (np.ndarray): query signal
         rate (int): sampling rate, number of data points per second.
         how_argmax (str, optional): how to compute the `argmax` of cross-correlated `data` and `query`. Defaults to 'whole'.
-            - `whole` : `argmax` over the entire cross-correlation array
-            - `inds` : pre-computes indices where cross-correlation is above 0.5, then finds the `argmax` over these
+
+        * `whole` : `argmax` over the entire cross-correlation array
+        * `inds` : pre-computes indices where cross-correlation is above 0.5, then finds the `argmax` over these
+
         how_t0 (str, optional): how to compute start time. Defaults to 'query'.
-            - `query`: `stop time - query duration = start time`. 
-            - `lags` : the start time is the `argmax` of cross-correlation lags.
+
+        * `query`: `stop time - query duration = start time`. 
+        * `lags` : the start time is the `argmax` of cross-correlation lags.
+        
         plot (bool, optional): whether to plot results. Defaults to False.
 
     Returns:
