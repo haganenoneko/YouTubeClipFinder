@@ -1,0 +1,53 @@
+INFO:root:yt-dlp -f 140 -o "oHP7u5zHYSY.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:10 -to 00:52:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:
+
+ffmpeg cmd:
+['yt-dlp -f 140', '-o "oHP7u5zHYSY.m4a"', '--external-downloader ffmpeg --external-downloader-args', '"ffmpeg_i:-ss 00:50:10 -to 00:52:10"', 'https://youtu.be/oHP7u5zHYSY']
+INFO:root:yt-dlp -f 140 --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:10 -to 00:52:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:
+
+ffmpeg cmd:
+['yt-dlp -f 140', '--external-downloader ffmpeg --external-downloader-args', '"ffmpeg_i:-ss 00:50:10 -to 00:52:10"', 'https://youtu.be/oHP7u5zHYSY']
+INFO:root:yt-dlp -f 140 --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:10 -to 00:52:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:
+
+ffmpeg cmd:
+['yt-dlp -f 140', '--external-downloader ffmpeg --external-downloader-args', '"ffmpeg_i:-ss 00:50:10 -to 00:52:10"', 'https://youtu.be/oHP7u5zHYSY']
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:10 -to 00:52:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "oHP7u5zHYSY.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:10 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\oHP7u5zHYSY.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:oHP7u5zHYSY.m4a already exists.
+INFO:root:oHP7u5zHYSY.m4a already exists.
+INFO:root:oHP7u5zHYSY.m4a already exists.
+[WindowsPath('C:/Users/delbe/Documents/CodeRepositories/Miscellaneous/YouTubeClipFinder/data/oHP7u5zHYSY.m4a')]
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data/oHP7u5zHYSY_2..m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:oHP7u5zHYSY.m4a already exists.
+[WindowsPath('C:/Users/delbe/Documents/CodeRepositories/Miscellaneous/YouTubeClipFinder/data/oHP7u5zHYSY.m4a')]
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data/oHP7u5zHYSY_2..m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:oHP7u5zHYSY.m4a already exists.
+[WindowsPath('C:/Users/delbe/Documents/CodeRepositories/Miscellaneous/YouTubeClipFinder/data/oHP7u5zHYSY.m4a')]
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data/oHP7u5zHYSY_2..m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
+INFO:root:oHP7u5zHYSY.m4a already exists.
+[WindowsPath('C:/Users/delbe/Documents/CodeRepositories/Miscellaneous/YouTubeClipFinder/data/oHP7u5zHYSY.m4a')]
+INFO:root:
+
+ffmpeg cmd:
+yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data/oHP7u5zHYSY_2..m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/oHP7u5zHYSY
