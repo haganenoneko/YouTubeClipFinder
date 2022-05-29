@@ -32,5 +32,4 @@ cmd = get_cmd(url, '5030', '5110', 140,
     run=True
 )
 
-
-# run_cmd(cmd, shell=True)
+run_cmd(cmd, shell=True)

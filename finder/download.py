@@ -1,12 +1,10 @@
 from pathlib import Path
 import re
 import logging
-from typing import List, Tuple, Type
-from subprocess import call, Popen, TimeoutExpired
+from typing import List, Tuple
+from subprocess import call, Popen
 from datetime import datetime
 import validators
-
-__all__ = ['get_cmd']
 
 
 def removeNonNumeric(s: str) -> str:
@@ -39,6 +37,36 @@ def run_cmd(cmd: List[str], concurrent=True, **kwargs) -> Tuple[str, str]:
     return proc
 
 
+def get_filename(url: str, loc: Path = None) -> str:
+    """Get output filename from download
+
+    Args:
+        url (str): YouTube url
+        loc (Path, optional): output directory. Defaults to None.
+
+    Raises:
+        TypeError: Raised if `loc` is not `NoneType` or `Path` type.
+    """
+    if loc is None:
+        filename = url.split("/")[-1] + '.m4a'
+    elif isinstance(loc, Path):
+        filename = loc / "{}.m4a".format(url.split("/")[-1])
+    else:
+        raise TypeError(
+            f"Argument `loc` should be NoneType or Path, not {type(loc)}"
+        )
+
+    if isinstance(filename, Path) and filename.is_file():
+        files = list(filename.parent.glob(f"{filename.stem}*"))
+        logging.info(f"{filename.name} already exists.\n{files}")
+        n = len(files) + 1
+        filename = f"{filename.parent}/{filename.stem}_{n}.{filename.suffix}"
+    else:
+        filename = str(filename)
+
+    return filename
+
+
 def get_cmd(
         url: str,
         start: str,
@@ -61,40 +89,29 @@ def get_cmd(
     """
 
     validators.url(url)
-    start = getTimestamp(start)
-    stop = getTimestamp(stop)
-
-    if loc:
-        filename = loc / "{}.m4a".format(url.split("/")[-1])
-    else:
-        filename = url.split("/")[-1] + '.m4a'
-
-    if isinstance(filename, Path) and filename.is_file():
-        files = list(filename.parent.glob(f"{filename.stem}*"))
-        logging.info(f"{filename.name} already exists.\n{files}")
-        n = len(files) + 1
-        filename = f"{filename.parent}/{filename.stem}_{n}.{filename.suffix}"
-    else:
-        filename = str(filename)
 
     if not fmt in [139, 140]:
         raise ValueError(
             f"Currently, only audio formats (139, 140) are supported, not {fmt}.")
 
+    start = getTimestamp(start)
+    stop = getTimestamp(stop)
+    filename = get_filename(url, loc=loc)
+
     ffmpeg_header = "--external-downloader ffmpeg --external-downloader-args"
     ffmpeg_cmd = f"\"ffmpeg_i:-ss {start} -to {stop}\""
     cmd = [
-        f"yt-dlp -f {fmt}", 
+        f"yt-dlp -f {fmt}",
         f"-o \"{filename}\"",
         ffmpeg_header,
         ffmpeg_cmd, url
     ]
     cmd = ' '.join(cmd)
-    
+
     try:
         assert all(isinstance(x, str) for x in cmd)
     except AssertionError:
         raise TypeError(f"All arguments to `Popen` must be strings:\n{cmd}")
 
     logging.info(f"\n\nffmpeg cmd:\n{cmd}")
-    return cmd 
+    return cmd
