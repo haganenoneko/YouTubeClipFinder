@@ -31,6 +31,7 @@ def get_video_duration(
 def get_bins(
     duration: int, 
     nbins: int=10,
+    binorder: str='mirrored',
     min_binwidth: int=30,
     max_binwidth: int=120, 
     plot=False) -> List[List[int]]:
@@ -46,6 +47,10 @@ def get_bins(
     Returns:
         List[List[int, int]]: list of bins
     """
+
+    if binorder not in ['linear', 'mirrored']:
+        raise ValueError(f"`binorder` must be one of 'linear' or 'mirrored', not {binorder}")
+
     bins: List[List[int]] = [] 
     binwidth = math.floor(duration / nbins)
     
@@ -67,20 +72,22 @@ def get_bins(
     if plot:
         _, ax = plt.subplots()
 
-    for i in range(1, nbins+4):
-        ind = (i // 2) * (-1)**(i % 2)
-        ind += ind0 
-
-        if ind >= nbins:
-            continue 
-
-        if ind > 0:
-            left, right = rbinedges[ind-1] + 1, rbinedges[ind]
-        else:
-            left, right = 1, rbinedges[ind]
+    for i in range(1, nbins+1):
         
-        bins.append([left, right])
+        if binorder == 'mirrored':
+            ind = (i // 2) * (-1)**(i % 2)
+            ind += ind0 
+        else:
+            ind = i 
 
+        if ind >= nbins: continue 
+
+        left, right = rbinedges[ind-1] + 1, rbinedges[ind]
+        
+        if left > right: break         
+
+        bins.append([left, right])
+        
         if not plot: 
             continue 
 
@@ -94,6 +101,11 @@ def get_bins(
             transform=ax.transData
         )
 
+    if binorder == 'linear':
+        bins.insert(0, [1, rbinedges[0]])
+    else:
+        bins.append([1, rbinedges[0]])
+
     if plot:
         plt.show()
     
@@ -101,8 +113,8 @@ def get_bins(
 
 def bins2str(bins: List[List[int]]) -> np.ndarray:
     bin_arr = np.array(bins)
+    print(f"Min Time: {np.min(bin_arr):<8} Max Time: {np.max(bin_arr):<8}")
     return vec_seconds2str(bin_arr)
 
-dur_int, dur_str = get_video_duration(
-    'https://youtu.be/oHP7u5zHYSY')
-
+# dur_int, dur_str = get_video_duration(
+#     'https://youtu.be/oHP7u5zHYSY')
