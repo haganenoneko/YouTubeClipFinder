@@ -45,9 +45,13 @@ def read_audio_data(
     > (17642,) 441
     ```
     """
-    dataFiles = list(dir.glob(f"{name}*.{ext}"))
+    dataFiles = list(dir.glob(f"{name}*{ext}"))
     if not dataFiles:
-        raise FileNotFoundError(f"No files found in {dir} with pattern {name}*.{ext}")
+        raise FileNotFoundError(
+            f"No files found in {dir} with pattern {name}*{ext}")
+    
+    if len(dataFiles) < 1:
+        raise FileNotFoundError(f"{dir}/{name}{ext}")
     
     for data in dataFiles:
         print(f"Reading... {str(data):<8}")
@@ -108,7 +112,8 @@ class FindSignal:
         self._how_t0 = how_t0 
     
     def parse_times(self, corr: np.ndarray) -> Tuple[int, int]:
-        if self.how_argmax == 'inds':
+        
+        if self._how_argmax == 'inds':
             inds = np.where(corr > 0.5)[0]
             t1 = inds[np.argmax(corr[inds])] 
         else:
@@ -116,7 +121,7 @@ class FindSignal:
         
         t1 = math.ceil(t1/self.rate)
 
-        if self.how_t0 == 'query':
+        if self._how_t0 == 'query':
             dt = int(self.query.shape[0] / self.rate)
             t0 = t1 - dt 
         else:
@@ -144,17 +149,21 @@ class FindSignal:
         plt.show()
 
     
-    def findsignal(self, plot=False) -> Tuple[int, int]:
+    def findsignal(self, plot=False) -> Tuple[tuple, float]:
            
         corr = correlate(self.data, self.query, method='fft')
+        peak = np.max(corr)
+        
         if corr[corr > 0.5].shape[0] < 1:
-            raise NoSignalException
-
+            t1 = np.argmax(corr)/self.rate
+            logging.info(f"Peak: ({t1:.1f}, {peak:.1e})")
+            return None, peak 
+            
         t0, t1 = self.parse_times(corr)
-        msg = f"Start: {t0:>10} Stop: {t1:<10}"
+        msg = f"Corr: {peak:<10} Start: {t0:<10} Stop: {t1:<10}"
         logging.info(msg)
 
         if plot: 
             self._plot_found_signal(corr, (t0, t1), msg)
 
-        return t0, t1
+        return (t0, t1), peak 

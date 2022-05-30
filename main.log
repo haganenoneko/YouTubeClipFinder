@@ -1,250 +1,328 @@
+WARNING:sox:SoX could not be found!
+
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
 INFO:root:nbins: 61       binwidth:      120 edge clip:      100
-INFO:root:
+INFO:root:kkni4RCxM0A_0.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_1.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_2.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_3.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_4.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_5.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_6.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_7.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_8.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_9.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_10.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_11.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_12.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_13.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_14.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (23.9, 2.6e-01)
+INFO:root:Not in ['01:03:41' '01:05:40']
+INFO:root:Peak: (106.8, 3.2e-01)
+INFO:root:Not in ['01:05:41' '01:07:40']
+INFO:root:Peak: (37.5, 2.8e-01)
+INFO:root:Not in ['01:01:41' '01:03:40']
+INFO:root:Peak: (119.3, 3.0e-01)
+INFO:root:Not in ['01:07:41' '01:09:40']
+INFO:root:Peak: (79.5, 3.0e-01)
+INFO:root:Not in ['00:59:41' '01:01:40']
+INFO:root:Peak: (24.0, 3.2e-01)
+INFO:root:Not in ['01:09:41' '01:11:40']
+INFO:root:Peak: (102.7, 3.6e-01)
+INFO:root:Not in ['00:57:41' '00:59:40']
+INFO:root:Peak: (20.5, 3.6e-01)
+INFO:root:Not in ['01:11:41' '01:13:40']
+INFO:root:Corr: 0.5425277948379517 Start: 93         Stop: 103       
+INFO:root:['00:55:41' '00:57:40']
+INFO:root:Peak: (24.0, 3.9e-01)
+INFO:root:Not in ['01:13:41' '01:15:40']
+INFO:root:Peak: (96.8, 4.7e-01)
+INFO:root:Not in ['00:53:41' '00:55:40']
+INFO:root:Peak: (21.2, 3.3e-01)
+INFO:root:Not in ['01:15:41' '01:17:40']
+INFO:root:Peak: (106.6, 4.3e-01)
+INFO:root:Not in ['00:51:41' '00:53:40']
+INFO:root:Peak: (84.0, 3.2e-01)
+INFO:root:Not in ['01:17:41' '01:19:40']
+INFO:root:Peak: (55.4, 2.6e-01)
+INFO:root:Not in ['00:49:41' '00:51:40']
+WARNING:sox:SoX could not be found!
 
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:50:30 -to 00:51:10" https://youtu.be/kkni4RCxM0A
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
 INFO:root:nbins: 61       binwidth:      120 edge clip:      100
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:03:41 -to 01:05:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:05:41 -to 01:07:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:01:41 -to 01:03:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:07:41 -to 01:09:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:59:41 -to 01:01:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:09:41 -to 01:11:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:57:41 -to 00:59:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:11:41 -to 01:13:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:55:41 -to 00:57:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:13:41 -to 01:15:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:53:41 -to 00:55:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:15:41 -to 01:17:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:51:41 -to 00:53:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:17:41 -to 01:19:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:49:41 -to 00:51:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:19:41 -to 01:21:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:47:41 -to 00:49:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:21:41 -to 01:23:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:45:41 -to 00:47:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:23:41 -to 01:25:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:43:41 -to 00:45:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:25:41 -to 01:27:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:41:41 -to 00:43:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:27:41 -to 01:29:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:39:41 -to 00:41:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:29:41 -to 01:31:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:37:41 -to 00:39:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:31:41 -to 01:33:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:35:41 -to 00:37:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:33:41 -to 01:35:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:33:41 -to 00:35:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:35:41 -to 01:37:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:31:41 -to 00:33:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:37:41 -to 01:39:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:29:41 -to 00:31:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:39:41 -to 01:41:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:27:41 -to 00:29:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:41:41 -to 01:43:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:25:41 -to 00:27:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:43:41 -to 01:45:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:23:41 -to 00:25:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:45:41 -to 01:47:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:21:41 -to 00:23:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:47:41 -to 01:49:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:19:41 -to 00:21:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:49:41 -to 01:51:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:17:41 -to 00:19:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:51:41 -to 01:53:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:15:41 -to 00:17:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:53:41 -to 01:55:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:13:41 -to 00:15:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:55:41 -to 01:57:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:11:41 -to 00:13:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:57:41 -to 01:59:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:09:41 -to 00:11:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 01:59:41 -to 02:01:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:07:41 -to 00:09:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 02:01:41 -to 02:03:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:05:41 -to 00:07:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:03:41 -to 00:05:40" https://youtu.be/kkni4RCxM0A
-INFO:root:
-
-ffmpeg cmd:
-yt-dlp -f 140 -o "C:\Users\delbe\Documents\CodeRepositories\Miscellaneous\YouTubeClipFinder\data\kkni4RCxM0A.m4a" --external-downloader ffmpeg --external-downloader-args "ffmpeg_i:-ss 00:01:41 -to 00:03:40" https://youtu.be/kkni4RCxM0A
+INFO:root:kkni4RCxM0A_0.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_1.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_2.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_3.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_4.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_5.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_6.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_7.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_8.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_9.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_10.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_11.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_12.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_13.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_14.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (23.9, 2.6e-01)
+INFO:root:Not in ['01:03:41' '01:05:40']
+INFO:root:Peak: (106.8, 3.2e-01)
+INFO:root:Not in ['01:05:41' '01:07:40']
+INFO:root:Peak: (37.5, 2.8e-01)
+INFO:root:Not in ['01:01:41' '01:03:40']
+INFO:root:Peak: (119.3, 3.0e-01)
+INFO:root:Not in ['01:07:41' '01:09:40']
+INFO:root:Peak: (79.5, 3.0e-01)
+INFO:root:Not in ['00:59:41' '01:01:40']
+INFO:root:Peak: (24.0, 3.2e-01)
+INFO:root:Not in ['01:09:41' '01:11:40']
+INFO:root:Peak: (102.7, 3.6e-01)
+INFO:root:Not in ['00:57:41' '00:59:40']
+INFO:root:Peak: (20.5, 3.6e-01)
+INFO:root:Not in ['01:11:41' '01:13:40']
+INFO:root:Corr: 0.5425277948379517 Start: 93         Stop: 103       
+INFO:root:['00:55:41' '00:57:40']
+INFO:root:Peak: (24.0, 3.9e-01)
+INFO:root:Not in ['01:13:41' '01:15:40']
+INFO:root:Peak: (96.8, 4.7e-01)
+INFO:root:Not in ['00:53:41' '00:55:40']
+INFO:root:Peak: (21.2, 3.3e-01)
+INFO:root:Not in ['01:15:41' '01:17:40']
+INFO:root:Peak: (106.6, 4.3e-01)
+INFO:root:Not in ['00:51:41' '00:53:40']
+INFO:root:Peak: (84.0, 3.2e-01)
+INFO:root:Not in ['01:17:41' '01:19:40']
+INFO:root:Peak: (55.4, 2.6e-01)
+INFO:root:Not in ['00:49:41' '00:51:40']
+INFO:root:kkni4RCxM0A_15.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_16.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_17.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_18.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_19.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_20.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_21.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_22.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_23.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_24.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_25.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_26.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_27.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_28.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_29.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (84.4, 4.7e-01)
+INFO:root:Not in ['01:19:41' '01:21:40']
+INFO:root:Peak: (16.3, 4.8e-01)
+INFO:root:Not in ['00:47:41' '00:49:40']
+INFO:root:Peak: (70.3, 3.3e-01)
+INFO:root:Not in ['01:21:41' '01:23:40']
+INFO:root:Peak: (120.0, 4.4e-01)
+INFO:root:Not in ['00:45:41' '00:47:40']
+INFO:root:Peak: (103.6, 3.0e-01)
+INFO:root:Not in ['01:23:41' '01:25:40']
+INFO:root:Peak: (67.0, 3.5e-01)
+INFO:root:Not in ['00:43:41' '00:45:40']
+INFO:root:Peak: (12.8, 2.9e-01)
+INFO:root:Not in ['01:25:41' '01:27:40']
+INFO:root:Peak: (54.1, 4.1e-01)
+INFO:root:Not in ['00:41:41' '00:43:40']
+INFO:root:Peak: (7.4, 3.4e-01)
+INFO:root:Not in ['01:27:41' '01:29:40']
+INFO:root:Peak: (68.9, 4.1e-01)
+INFO:root:Not in ['00:39:41' '00:41:40']
+INFO:root:Peak: (23.3, 3.9e-01)
+INFO:root:Not in ['01:29:41' '01:31:40']
+INFO:root:Peak: (110.5, 3.8e-01)
+INFO:root:Not in ['00:37:41' '00:39:40']
+INFO:root:Peak: (16.4, 3.7e-01)
+INFO:root:Not in ['01:31:41' '01:33:40']
+INFO:root:Peak: (111.8, 2.7e-01)
+INFO:root:Not in ['00:35:41' '00:37:40']
+INFO:root:Peak: (43.7, 3.0e-01)
+INFO:root:Not in ['01:33:41' '01:35:40']
+INFO:root:kkni4RCxM0A_30.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_31.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_32.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_33.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_34.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_35.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_36.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_37.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_38.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_39.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_40.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_41.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_42.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_43.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_44.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (78.3, 2.6e-01)
+INFO:root:Not in ['00:33:41' '00:35:40']
+INFO:root:Peak: (31.7, 3.0e-01)
+INFO:root:Not in ['01:35:41' '01:37:40']
+INFO:root:Peak: (36.2, 3.5e-01)
+INFO:root:Not in ['00:31:41' '00:33:40']
+INFO:root:Peak: (111.4, 3.2e-01)
+INFO:root:Not in ['01:37:41' '01:39:40']
+INFO:root:Peak: (87.0, 4.2e-01)
+INFO:root:Not in ['00:29:41' '00:31:40']
+INFO:root:Peak: (20.3, 2.9e-01)
+INFO:root:Not in ['01:39:41' '01:41:40']
+INFO:root:Peak: (59.6, 4.4e-01)
+INFO:root:Not in ['00:27:41' '00:29:40']
+INFO:root:Peak: (35.5, 2.5e-01)
+INFO:root:Not in ['01:41:41' '01:43:40']
+INFO:root:Peak: (34.1, 3.6e-01)
+INFO:root:Not in ['00:25:41' '00:27:40']
+INFO:root:Peak: (76.5, 2.3e-01)
+INFO:root:Not in ['01:43:41' '01:45:40']
+INFO:root:Corr: 0.5148689150810242 Start: 52         Stop: 62        
+INFO:root:['00:23:41' '00:25:40']
+INFO:root:Peak: (119.1, 2.3e-01)
+INFO:root:Not in ['01:45:41' '01:47:40']
+INFO:root:Peak: (30.5, 4.0e-01)
+INFO:root:Not in ['00:21:41' '00:23:40']
+INFO:root:Peak: (102.2, 2.7e-01)
+INFO:root:Not in ['01:47:41' '01:49:40']
+INFO:root:Peak: (107.8, 3.3e-01)
+INFO:root:Not in ['00:19:41' '00:21:40']
+INFO:root:kkni4RCxM0A_45.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_46.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_47.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_48.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_49.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_50.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_51.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_52.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_53.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_54.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_55.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_56.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_57.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_58.m4a already exists.
+Ignoring...
+INFO:root:kkni4RCxM0A_59.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (32.4, 2.5e-01)
+INFO:root:Not in ['01:49:41' '01:51:40']
+INFO:root:Corr: 0.6003429889678955 Start: 32         Stop: 42        
+INFO:root:['00:17:41' '00:19:40']
+INFO:root:Peak: (37.1, 3.3e-01)
+INFO:root:Not in ['01:51:41' '01:53:40']
+INFO:root:Peak: (109.6, 2.8e-01)
+INFO:root:Not in ['00:15:41' '00:17:40']
+INFO:root:Peak: (79.3, 2.4e-01)
+INFO:root:Not in ['01:53:41' '01:55:40']
+INFO:root:Peak: (54.9, 4.8e-01)
+INFO:root:Not in ['00:13:41' '00:15:40']
+INFO:root:Peak: (106.7, 2.7e-01)
+INFO:root:Not in ['01:55:41' '01:57:40']
+INFO:root:Peak: (46.8, 4.2e-01)
+INFO:root:Not in ['00:11:41' '00:13:40']
+INFO:root:Peak: (117.8, 4.6e-01)
+INFO:root:Not in ['01:57:41' '01:59:40']
+INFO:root:Peak: (119.7, 3.1e-01)
+INFO:root:Not in ['00:09:41' '00:11:40']
+INFO:root:Corr: 0.577498197555542 Start: 36         Stop: 46        
+INFO:root:['01:59:41' '02:01:40']
+INFO:root:Peak: (120.5, 2.7e-01)
+INFO:root:Not in ['00:07:41' '00:09:40']
+INFO:root:Peak: (73.3, 2.8e-01)
+INFO:root:Not in ['02:01:41' '02:03:40']
+INFO:root:Peak: (14.8, 3.4e-01)
+INFO:root:Not in ['00:05:41' '00:07:40']
+INFO:root:Peak: (67.0, 3.7e-01)
+INFO:root:Not in ['00:03:41' '00:05:40']
+INFO:root:kkni4RCxM0A_60.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Peak: (43.0, 4.2e-01)
+INFO:root:Not in ['00:01:41' '00:03:40']
