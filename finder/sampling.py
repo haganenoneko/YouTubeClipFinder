@@ -3,15 +3,15 @@ import time
 import yt_dlp
 import logging
 import numpy as np
+from random import shuffle
 import matplotlib.pyplot as plt
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
+from common import InvalidArgumentException, seconds2str, vec_seconds2str
 
-def seconds2str(secs: int, fmt=r"%H:%M:%S") -> str:
-    return time.strftime(fmt, time.gmtime(secs))
-
-
-vec_seconds2str = np.vectorize(seconds2str)
+# ---------------------------------------------------------------------------- #
+#         Functions that discretize a video into bins of equal duration        #
+# ---------------------------------------------------------------------------- #
 
 
 def get_video_duration(
@@ -24,7 +24,7 @@ def get_video_duration(
     Returns:
         Tuple[int, str]: duration in seconds, and as a HH:MM:SS string
     """
-    meta: dict = yt_dlp.YoutubeDL().extract_info(
+    meta: Dict[str, Any] = yt_dlp.YoutubeDL().extract_info(
         url, download=False
     )
     seconds = meta['duration']
@@ -78,9 +78,11 @@ def get_bins(
         np.ndarray: 2D array of `[start times, end times]` 
     """
 
-    if binorder not in ['linear', 'mirrored']:
-        raise ValueError(
-            f"`binorder` must be one of 'linear' or 'mirrored', not {binorder}")
+    if binorder not in ['linear', 'mirrored', 'random']:
+        raise InvalidArgumentException(
+            'binorder', binorder,
+            ['linear', 'mirrored', 'random']
+        )
 
     bins: List[List[int]] = []
 
@@ -132,10 +134,13 @@ def get_bins(
         ax.plot(edges, [i]*2, )
         ax.text(sum(edges)/2, i, str(i), **text_kw)
 
-    if binorder == 'linear':
-        bins.insert(0, (1, rbinedges[0]))
-    else:
+    if binorder == 'mirrored':
         bins.append((1, rbinedges[0]))
+    else:
+        bins.insert(0, (1, rbinedges[0]))
+
+    if binorder == 'random':
+        shuffle(bins)
 
     if plot:
         plt.show()
