@@ -13,7 +13,9 @@ There are probably better ways to go about doing this.
 
 ### Progress
 
-An example can be found at this notebook: [link]()
+An example for how to use this tool can be found at this notebook: [link](https://github.com/haganenoneko/YouTubeClipFinder/blob/main/example.ipynb).
+
+The documentation for some of the functions is a bit outdated, so please bear with me.
 
 ### Dependencies
 This package was written with `Python 3.10.1`. Besides the libraries in `requirements.txt`, please also make sure that you have `ffmpeg` installed correctly. 
