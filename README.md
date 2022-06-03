@@ -13,7 +13,7 @@ There are probably better ways to go about doing this.
 
 ### Progress
 
-Tested to work with two of three clips so far. There's one clip that I'm working on right now that I just can't seem to find the source of - both manually and using this package. 
+An example can be found at this notebook: [link]()
 
 ### Dependencies
 This package was written with `Python 3.10.1`. Besides the libraries in `requirements.txt`, please also make sure that you have `ffmpeg` installed correctly. 

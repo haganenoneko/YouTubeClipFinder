@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from typing import Tuple, Union
 from scipy.signal import correlate, correlation_lags
 
-from common import InvalidArgumentException
+from finder.common import InvalidArgumentException
 
 # ---------------------------------------------------------------------------- #
 #        Find endpoints of a query signal inside a larger source signal        #
@@ -154,21 +154,24 @@ class FindSignal:
         ax.legend(loc='upper left', bbox_to_anchor=[0.9, 1.1])
         plt.show()
 
-    def findsignal(self, plot=False) -> Tuple[tuple, float]:
+    def findsignal(self, how='xcorr', plot=False) -> Tuple[tuple, float]:
 
-        corr = correlate(self.data, self.query, method='fft')
-        peak = np.max(corr)
+        if how == 'xcorr':
+            res = correlate(self.data, self.query, method='fft')
+            peak = np.max(res)
+        else:
+            raise NotImplementedError()
 
-        if corr[corr > 0.5].shape[0] < 1:
-            t1 = np.argmax(corr)/self.rate
+        if res[res > 0.5].shape[0] < 1:
+            t1 = np.argmax(res)/self.rate
             logging.info(f"Peak: ({t1:.1f}, {peak:.1e})")
             return None, peak
 
-        t0, t1 = self.parse_times(corr)
+        t0, t1 = self.parse_times(res)
         msg = f"Corr: {peak:<10} Start: {t0:<10} Stop: {t1:<10}"
         logging.info(msg)
 
         if plot:
-            self._plot_found_signal(corr, (t0, t1), msg)
+            self._plot_found_signal(res, (t0, t1), msg)
 
         return (t0, t1), peak

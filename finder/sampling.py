@@ -7,7 +7,7 @@ from random import shuffle
 import matplotlib.pyplot as plt
 from typing import List, Tuple, Dict, Any
 
-from common import InvalidArgumentException, seconds2str, vec_seconds2str
+from finder.common import InvalidArgumentException, seconds2str, vec_seconds2str
 
 # ---------------------------------------------------------------------------- #
 #         Functions that discretize a video into bins of equal duration        #

@@ -1,7 +1,11 @@
-from typing import List
+from typing import List, Tuple 
+
+import matplotlib.pyplot as plt 
+from matplotlib.dates import DateFormatter
+
 from datetime import datetime
-import time
 from numpy import vectorize
+import time
 
 # ---------------------------------------------------------------------------- #
 #                        Common functions and exceptions                       #
@@ -39,3 +43,22 @@ def str2hms(t: str) -> datetime:
 
 def hms2str(s: datetime) -> str:
     return datetime.strftime(s, "%H:%M:%S")
+
+# --------------------------------- Plotting --------------------------------- #
+
+def create_figure() -> Tuple[plt.Figure, plt.Axes]:
+    fig, ax = plt.subplots(
+        figsize=(8, 4),
+        constrained_layout=True,
+        dpi=150
+    )
+
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Cross-Correlation")
+    ax.axhline(0.5, color='k', ls='--', lw=1, alpha=0.5)
+    ax.grid(True, lw=0.5, color='gray', alpha=0.5)
+
+    ax.xaxis.set_major_formatter(DateFormatter("%H:%M:%S"))
+    ax.tick_params(axis='x', labelsize=8, labelrotation=40)
+
+    return fig, ax 

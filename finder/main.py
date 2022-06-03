@@ -6,17 +6,16 @@ from pathlib import Path
 from subprocess import Popen
 
 import matplotlib.pyplot as plt
-from matplotlib.dates import DateFormatter
 
 from datetime import datetime, timedelta
 
 from types import NoneType
 from typing import List, Tuple, Union
 
-import sampling
-from common import str2hms
-from download import get_cmd, run_cmd
-from findsignal import FindSignal, read_audio_data
+from finder import sampling
+from finder.download import get_cmd, run_cmd
+from finder.common import str2hms, create_figure
+from finder.findsignal import FindSignal, read_audio_data
 
 # ---------------------------------------------------------------------------- #
 #                   Download and compare clips by their audio                  #
@@ -24,11 +23,12 @@ from findsignal import FindSignal, read_audio_data
 
 DATADIR = Path.cwd() / 'data'
 
-logging.basicConfig(
-    filename=Path.cwd() / 'main.log',
-    encoding='utf-8',
-    level=logging.INFO
-)
+def create_logger(name: str) -> None:
+    logging.basicConfig(
+        filename=Path.cwd() / f'{name}.log',
+        encoding='utf-8',
+        level=logging.INFO
+    )
 
 # -------------------------------- Main class -------------------------------- #
 
@@ -38,11 +38,17 @@ class Finder:
             self,
             source: str,
             query: Union[str, np.ndarray],
+            logname: str = None,
             **query_kwargs) -> None:
 
         self.url = source
         self.query = self.get_query(
             query, **query_kwargs)
+        
+        if logname is None:
+            create_logger(query)
+        else:
+            create_logger(logname)
 
     def get_query(
             self,
@@ -61,6 +67,8 @@ class Finder:
             return next(read_audio_data(
                 query.stem, query.parent, query.suffix
             ))[0]
+        else:
+            raise FileNotFoundError(query)
 
         cmd, fn = get_cmd(query, **query_kwargs)
 
@@ -194,19 +202,10 @@ class Finder:
             return a + delta
 
     @staticmethod
-    def _plot_peak_corr(peaks: np.ndarray):
+    def _plot_peak_corr(peaks: np.ndarray, title: str=None, save_path=None):
         peaks = np.array(peaks)
 
-        _, ax = plt.subplots(
-            figsize=(8, 4),
-            constrained_layout=True,
-            dpi=150)
-
-        ax.set_xlabel("Time")
-        ax.set_ylabel("Cross-Correlation")
-        ax.axhline(0.5, color='k', ls='--', lw=1, alpha=0.5)
-        ax.grid(True, lw=0.5, color='gray', alpha=0.5)
-
+        _, ax = create_figure()
         kw = dict(ls='none', marker='o', ms=4)
 
         xvals = peaks[:, 0]
@@ -216,8 +215,19 @@ class Finder:
         ax.plot(xvals[mask], yvals[mask], c='r', label=">0.5", **kw)
         ax.plot(xvals[~mask], yvals[~mask], c='b', alpha=0.5, **kw)
 
-        ax.xaxis.set_major_formatter(DateFormatter("%H:%M:%S"))
-        ax.tick_params(axis='x', labelsize=8, labelrotation=40)
+        indmax = np.argmax(yvals)
+        ax.plot(
+            xvals[indmax], yvals[indmax], 
+            marker='o', mec='purple', mew=2, 
+            ms=16, mfc='none', ls='none'
+        )
+        print(xvals[indmax], yvals[indmax])
+
+        if title:
+            ax.set_title(title)
+        if save_path:
+            plt.savefig(save_path, bbox_inches='tight')
+            print(f"Figure saved at {save_path}")
 
         plt.show()
 
@@ -251,8 +261,10 @@ class Finder:
         bins_str = self._bins_str
         delta = self._midtime(0) - self._midtime(1)
 
-        for i, fname in enumerate(self._fnames):
+        logging.info("Comparing query and source audio...")
 
+        for i, fname in enumerate(self._fnames):
+            k = i + start_bin
             result, peak = self._compare_signals(
                 i, fname,
                 max_wait_time=max_wait_time,
@@ -260,17 +272,17 @@ class Finder:
             )
 
             if result is None:
-                logging.info(f"Not in {bins_str[i+start_bin]}")
+                logging.info(f"Not in {bins_str[k]}")
                 peak_corr.append([
-                    self._midtime(i+start_bin),
+                    self._midtime(k),
                     peak
                 ])
             else:
-                logging.info(bins_str[i+start_bin])
+                logging.info(bins_str[k])
                 candidates.append(result)
 
                 peak_corr.append([
-                    self._midtime(i+start_bin),
+                    self._midtime(k),
                     peak
                 ])
 
@@ -280,41 +292,3 @@ class Finder:
         self._plot_peak_corr(peak_corr)
         return candidates
 
-
-myfinder = Finder(
-    source=r"https://youtu.be/HcoBgOlHvJc",
-    # query=r"https://youtu.be/jJd98IWDn54",
-    # start="5:32", stop="5:50", fmt=139, loc=DATADIR,
-    query="./data/jJd98IWDn54.m4a"
-)
-
-myfinder.get_bins(
-    max_binwidth=150,
-    clip_edges=100
-)
-
-logging.info(myfinder._bins_str)
-
-candidates = []
-max_dl = 10
-start_bin = 78
-max_bin = 82
-max_wait_time = 180
-
-run_dict = dict(
-    max_dl=max_dl,
-    fmt=139,
-    loc=DATADIR,
-    keepfiles=True,
-    max_wait_time=max_wait_time
-)
-
-while len(candidates) < 1:
-    myfinder.run(
-        start_bin=start_bin,
-        **run_dict
-    )
-
-    start_bin += max_dl
-    if start_bin > max_bin:
-        break

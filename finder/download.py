@@ -7,7 +7,7 @@ from subprocess import call, Popen
 from datetime import datetime, timedelta
 import validators
 
-from common import InvalidArgumentException
+from finder.common import InvalidArgumentException
 
 # ---------------------------------------------------------------------------- #
 #                         Download videos from YouTube                         #
