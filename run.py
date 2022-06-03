@@ -2,20 +2,22 @@ import logging
 from finder.main import Finder, DATADIR
 
 myfinder = Finder(
-    source=r"https://youtu.be/BmT8nFctYko",
+    source=r"https://youtu.be/bCdnJazCDb0",
     # query=r"https://youtu.be/jJd98IWDn54",
     # start="5:32", stop="5:50", fmt=139, loc=DATADIR,
-    query="./data/8KWnymfSczU_2.m4a",
-    logname="8KWnymfSczU_2c"
+    query="./data/OsqNklrWQw4.m4a",
+    logname="OsqNklrWQw4"
 )
 
 myfinder.get_bins(
     max_binwidth=150,
     clip_edges=220,
-    binorder="linear"
+    binorder="mirrored",
+    skipsize=5, 
 )
 
 logging.info(myfinder._bins_str)
+exit()
 
 candidates = []
 max_dl = 20

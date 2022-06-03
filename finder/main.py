@@ -95,7 +95,7 @@ class Finder:
             binorder: str = 'mirrored',
             min_binwidth: int = 30,
             max_binwidth: int = 120,
-            clip_edges: int = 60) -> None:
+            clip_edges: int = 60, **binkwargs) -> None:
 
         dur_int, _ = sampling.get_video_duration(self.url)
 
@@ -105,7 +105,8 @@ class Finder:
             binorder=binorder,
             min_binwidth=min_binwidth,
             max_binwidth=max_binwidth,
-            clip_edges=clip_edges
+            clip_edges=clip_edges,
+            **binkwargs
         )
 
         self._bins_str = sampling.bins2str(bins_int)
