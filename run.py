@@ -1,28 +1,26 @@
 import logging 
 from finder.main import Finder, DATADIR
+from finder.postplot import ReadLog
 
 myfinder = Finder(
-    source=r"https://youtu.be/bCdnJazCDb0",
-    # query=r"https://youtu.be/jJd98IWDn54",
-    # start="5:32", stop="5:50", fmt=139, loc=DATADIR,
-    query="./data/OsqNklrWQw4.m4a",
-    logname="OsqNklrWQw4"
+    source=r"https://youtu.be/mhw5m_hjHzQ",
+    query=r"https://youtu.be/d98HkWvzCN4",
+    start="00:00", stop="00:50", fmt=139, loc=DATADIR,
+    # query="./data/OsqNklrWQw4.m4a",
+    # logname="OsqNklrWQw4"
 )
 
 myfinder.get_bins(
     max_binwidth=150,
-    clip_edges=220,
+    clip_edges=600,
     binorder="mirrored",
     skipsize=5, 
 )
 
-logging.info(myfinder._bins_str)
-exit()
-
 candidates = []
-max_dl = 20
-start_bin = 39
-max_bin = 58
+max_dl = 50
+start_bin = 1
+max_bin = 150
 max_wait_time = 180
 
 run_dict = dict(
@@ -42,3 +40,5 @@ while len(candidates) < 1:
     start_bin += max_dl
     if start_bin > max_bin:
         break
+
+ReadLog(myfinder.logname).read(save_fig=True, save_csv=True)

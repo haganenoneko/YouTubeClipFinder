@@ -24,7 +24,7 @@ vec_remove_loginfo_header = np.vectorize(remove_loginfo_header)
 
 
 CORR_PATTERN = re.compile(
-    r"^(?:Corr:\s)([\d\.]*)\sStart:\s(\d+)\s*Stop:\s(\d+)"
+    r"^(?:Corr:\s)([\d\.]*)\sStart:\s(\-{0,1}\d+)\s*Stop:\s(\-{0,1}\d+)"
 )
 
 
@@ -116,8 +116,15 @@ class ReadLog:
             )
 
         if Path(outpath).is_file():
-            raise FileExistsError(str(outpath))
-
+            repl = None 
+            while repl not in ['y', 'n']:
+                repl = input(
+                    f"{str(outpath)} exists. Replace? (y/n)"
+                ).lower()
+                
+            if repl == 'n':
+                raise FileExistsError(str(outpath))
+            
         df.to_csv(outpath)
 
         print(

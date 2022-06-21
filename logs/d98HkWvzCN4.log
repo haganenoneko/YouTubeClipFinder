@@ -1,0 +1,203 @@
+INFO:root:nbins: 137      binwidth:      150 edge clip:      600
+INFO:root:mhw5m_hjHzQ_1.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_2.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_3.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_4.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_5.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_6.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_7.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_8.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_9.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_10.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_11.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_12.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_13.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_14.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_15.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_16.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_17.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_18.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_19.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_20.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_21.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_22.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_23.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_24.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_25.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_26.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_27.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_28.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_29.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_30.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_31.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_32.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_33.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_34.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_35.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_36.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_37.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_38.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_39.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_40.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_41.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_42.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_43.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_44.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_45.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_46.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_47.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_48.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_49.m4a already exists.
+Ignoring...
+INFO:root:mhw5m_hjHzQ_50.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Comparing query and source audio...
+INFO:root:Corr: 5.888724327087402 Start: 75         Stop: 125       
+INFO:root:['03:10:01' '03:12:30']
+INFO:root:Corr: 2.3031678199768066 Start: 43         Stop: 93        
+INFO:root:['02:50:01' '02:52:30']
+INFO:root:Corr: 3.3430728912353516 Start: 73         Stop: 123       
+INFO:root:['03:22:31' '03:25:00']
+INFO:root:Corr: 4.239521503448486 Start: 50         Stop: 100       
+INFO:root:['02:37:31' '02:40:00']
+INFO:root:Corr: 2.9254074096679688 Start: 10         Stop: 60        
+INFO:root:['03:35:01' '03:37:30']
+INFO:root:Corr: 1.8847392797470093 Start: 40         Stop: 90        
+INFO:root:['02:25:01' '02:27:30']
+INFO:root:Corr: 3.217129945755005 Start: 61         Stop: 111       
+INFO:root:['03:47:31' '03:50:00']
+INFO:root:Corr: 3.784302234649658 Start: 45         Stop: 95        
+INFO:root:['02:12:31' '02:15:00']
+INFO:root:Corr: 2.271512985229492 Start: 65         Stop: 115       
+INFO:root:['04:00:01' '04:02:30']
+INFO:root:Corr: 3.3535633087158203 Start: 50         Stop: 100       
+INFO:root:['02:00:01' '02:02:30']
+INFO:root:Corr: 3.864525079727173 Start: 12         Stop: 62        
+INFO:root:['04:12:31' '04:15:00']
+INFO:root:Corr: 3.16155743598938 Start: 51         Stop: 101       
+INFO:root:['01:47:31' '01:50:00']
+INFO:root:Corr: 2.596754789352417 Start: 59         Stop: 109       
+INFO:root:['04:25:01' '04:27:30']
+INFO:root:Corr: 3.309554100036621 Start: -36        Stop: 14        
+INFO:root:['01:35:01' '01:37:30']
+INFO:root:Corr: 3.497884750366211 Start: 88         Stop: 138       
+INFO:root:['04:37:31' '04:40:00']
+INFO:root:Corr: 5.8700666427612305 Start: 42         Stop: 92        
+INFO:root:['01:22:31' '01:25:00']
+INFO:root:Corr: 3.6462604999542236 Start: -33        Stop: 17        
+INFO:root:['04:50:01' '04:52:30']
+INFO:root:Corr: 3.026379108428955 Start: 43         Stop: 93        
+INFO:root:['01:10:01' '01:12:30']
+INFO:root:Corr: 3.696643352508545 Start: 95         Stop: 145       
+INFO:root:['05:02:31' '05:05:00']
+INFO:root:Corr: 4.25711727142334 Start: 54         Stop: 104       
+INFO:root:['00:57:31' '01:00:00']
+INFO:root:Corr: 3.3541510105133057 Start: 47         Stop: 97        
+INFO:root:['05:15:01' '05:17:30']
+INFO:root:Corr: 3.182806968688965 Start: 10         Stop: 60        
+INFO:root:['00:45:01' '00:47:30']
+INFO:root:Corr: 3.90749454498291 Start: 54         Stop: 104       
+INFO:root:['05:27:31' '05:30:00']
+INFO:root:Corr: 4.516817569732666 Start: 60         Stop: 110       
+INFO:root:['00:32:31' '00:35:00']
+INFO:root:Corr: 3.911165237426758 Start: 35         Stop: 85        
+INFO:root:['05:40:01' '05:42:30']
+INFO:root:Corr: 3.0878591537475586 Start: 32         Stop: 82        
+INFO:root:['00:20:01' '00:22:30']
+INFO:root:Corr: 3.4636688232421875 Start: 32         Stop: 82        
+INFO:root:['00:12:31' '00:15:00']
+INFO:root:Corr: 4.593681335449219 Start: 81         Stop: 131       
+INFO:root:['03:05:01' '03:07:30']
+INFO:root:Corr: 3.0788798332214355 Start: 97         Stop: 147       
+INFO:root:['02:55:01' '02:57:30']
+INFO:root:Corr: 4.369678497314453 Start: 43         Stop: 93        
+INFO:root:['03:17:31' '03:20:00']
+INFO:root:Corr: 3.713538885116577 Start: 38         Stop: 88        
+INFO:root:['02:42:31' '02:45:00']
+INFO:root:Corr: 7.724711894989014 Start: -8         Stop: 42        
+INFO:root:['03:30:01' '03:32:30']
+INFO:root:Corr: 4.765361785888672 Start: 21         Stop: 71        
+INFO:root:['02:30:01' '02:32:30']
+INFO:root:Corr: 3.8840508460998535 Start: 6          Stop: 56        
+INFO:root:['03:42:31' '03:45:00']
+INFO:root:Corr: 2.8618650436401367 Start: 60         Stop: 110       
+INFO:root:['02:17:31' '02:20:00']
+INFO:root:Corr: 3.1015145778656006 Start: 44         Stop: 94        
+INFO:root:['03:55:01' '03:57:30']
+INFO:root:Corr: 4.090606212615967 Start: 28         Stop: 78        
+INFO:root:['02:05:01' '02:07:30']
+INFO:root:Corr: 4.102717876434326 Start: -1         Stop: 49        
+INFO:root:['04:07:31' '04:10:00']
+INFO:root:Corr: 3.5859084129333496 Start: 55         Stop: 105       
+INFO:root:['01:52:31' '01:55:00']
+INFO:root:Corr: 3.0842034816741943 Start: 102        Stop: 152       
+INFO:root:['04:20:01' '04:22:30']
+INFO:root:Corr: 4.23670768737793 Start: 2          Stop: 52        
+INFO:root:['01:40:01' '01:42:30']
+INFO:root:Corr: 4.261322498321533 Start: 70         Stop: 120       
+INFO:root:['04:32:31' '04:35:00']
+INFO:root:Corr: 3.0661184787750244 Start: -6         Stop: 44        
+INFO:root:['01:27:31' '01:30:00']
+INFO:root:Corr: 2.528243064880371 Start: 64         Stop: 114       
+INFO:root:['04:45:01' '04:47:30']
+INFO:root:Corr: 4.478028774261475 Start: 107        Stop: 157       
+INFO:root:['01:15:01' '01:17:30']
+INFO:root:Corr: 2.6132559776306152 Start: 26         Stop: 76        
+INFO:root:['04:57:31' '05:00:00']
+INFO:root:Corr: 4.213477611541748 Start: 71         Stop: 121       
+INFO:root:['01:02:31' '01:05:00']
+INFO:root:Corr: 2.819955825805664 Start: -2         Stop: 48        
+INFO:root:['05:10:01' '05:12:30']
+INFO:root:Corr: 5.279168605804443 Start: 87         Stop: 137       
+INFO:root:['00:50:01' '00:52:30']
+INFO:root:Corr: 2.6499969959259033 Start: 97         Stop: 147       
+INFO:root:['05:22:31' '05:25:00']

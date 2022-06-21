@@ -23,12 +23,6 @@ from finder.findsignal import FindSignal, read_audio_data
 
 DATADIR = Path.cwd() / 'data'
 
-def create_logger(name: str) -> None:
-    logging.basicConfig(
-        filename=Path.cwd() / f'{name}.log',
-        encoding='utf-8',
-        level=logging.INFO
-    )
 
 # -------------------------------- Main class -------------------------------- #
 
@@ -44,12 +38,8 @@ class Finder:
         self.url = source
         self.query = self.get_query(
             query, **query_kwargs)
+        self.create_logger()
         
-        if logname is None:
-            create_logger(query)
-        else:
-            create_logger(logname)
-
     def get_query(
             self,
             query: Union[str, np.ndarray],
@@ -57,37 +47,66 @@ class Finder:
 
         if isinstance(query, np.ndarray):
             return query
-        if not isinstance(query, str):
+        elif not isinstance(query, str):
             raise TypeError(
                 f"`query` must be of type `np.ndarray` or `str`, not {type(query)}"
-            )
+            )        
 
-        if Path(query).is_file():
-            query = Path(query)
-            return next(read_audio_data(
-                query.stem, query.parent, query.suffix
-            ))[0]
+        if validators.url(query):
+            cmd, fn = get_cmd(query, **query_kwargs)
+            fn = Path(fn)
+            self.logname = fn.stem 
+
+            if not fn.is_file():
+                self.download_query(cmd)            
+
+            try:
+                return self.load_query(fn)
+            except FileNotFoundError:
+                raise FileNotFoundError(f"Query: {str(fn):>8}")
         else:
-            raise FileNotFoundError(query)
-
-        cmd, fn = get_cmd(query, **query_kwargs)
-
+            pquery = Path(query)
+            self.logname = pquery.stem
+            return self.load_query(pquery)[0]
+    
+    @staticmethod
+    def download_query(cmd: str):
         try:
             proc = run_cmd(cmd, concurrent=False, shell=True)
         except KeyboardInterrupt:
             proc.kill()
 
-        fn = Path(fn)
-        if fn.is_file():
-            query, _ = next(read_audio_data(
-                fn.stem, fn.parent, fn.suffix
-            ))
-            logging.info(
-                f"Query downloaded from {query} to {str(fn)}"
-            )
-            return query
+    @staticmethod
+    def load_query(p: Path) -> np.ndarray:
+        query, _ = next(read_audio_data(
+            p.stem, p.parent, p.suffix
+        ))
+        
+        logging.info(
+            f"Query downloaded to {str(p)}"
+        )
+
+        return query
+
+    def create_logger(self) -> None:
+        
+        logdir = Path.cwd() / 'logs' 
+        if not logdir.is_dir():
+            logdir.mkdir()
+        
+        logname = logdir / f'{self.logname}.log' 
+        logging.basicConfig(
+            filename=logname,
+            encoding='utf-8',
+            level=logging.INFO,
+            force=True
+        )
+
+        if logname.is_file():
+            print(f"Log file created at:\n{logname}")
+            self.logname = logname 
         else:
-            raise FileNotFoundError(f"Query: {str(fn):>8}")
+            raise FileNotFoundError(f"Log file was not created.")
 
     def get_bins(
             self,
@@ -163,7 +182,7 @@ class Finder:
             fname.parent,
             fname.suffix,
         ))
-
+        
         return FindSignal(
             data, self.query, rate
         ).findsignal()
@@ -266,6 +285,7 @@ class Finder:
 
         for i, fname in enumerate(self._fnames):
             k = i + start_bin
+
             result, peak = self._compare_signals(
                 i, fname,
                 max_wait_time=max_wait_time,
