@@ -1,0 +1,673 @@
+INFO:root:
+        nbins: 53       binwidth:      150 start offset:    29315
+        
+INFO:root:[['09:16:06' '09:18:35']
+ ['09:23:36' '09:26:05']
+ ['09:03:36' '09:06:05']
+ ['09:36:06' '09:38:35']
+ ['08:51:06' '08:53:35']
+ ['09:48:36' '09:51:05']
+ ['08:38:36' '08:41:05']
+ ['10:01:06' '10:03:35']
+ ['08:26:06' '08:28:35']
+ ['10:13:36' '10:16:05']
+ ['08:13:36' '08:16:05']
+ ['09:18:36' '09:21:05']
+ ['09:08:36' '09:11:05']
+ ['09:31:06' '09:33:35']
+ ['08:56:06' '08:58:35']
+ ['09:43:36' '09:46:05']
+ ['08:43:36' '08:46:05']
+ ['09:56:06' '09:58:35']
+ ['08:31:06' '08:33:35']
+ ['10:08:36' '10:11:05']
+ ['08:18:36' '08:21:05']
+ ['08:11:06' '08:13:35']
+ ['09:13:36' '09:16:05']
+ ['09:26:06' '09:28:35']
+ ['09:01:06' '09:03:35']
+ ['09:38:36' '09:41:05']
+ ['08:48:36' '08:51:05']
+ ['09:51:06' '09:53:35']
+ ['08:36:06' '08:38:35']
+ ['10:03:36' '10:06:05']
+ ['08:23:36' '08:26:05']
+ ['10:16:06' '10:18:35']
+ ['08:08:36' '08:11:05']
+ ['09:21:06' '09:23:35']
+ ['09:06:06' '09:08:35']
+ ['09:33:36' '09:36:05']
+ ['08:53:36' '08:56:05']
+ ['09:46:06' '09:48:35']
+ ['08:41:06' '08:43:35']
+ ['09:58:36' '10:01:05']
+ ['08:28:36' '08:31:05']
+ ['10:11:06' '10:13:35']
+ ['08:16:06' '08:18:35']
+ ['09:11:06' '09:13:35']
+ ['09:28:36' '09:31:05']
+ ['08:58:36' '09:01:05']
+ ['09:41:06' '09:43:35']
+ ['08:46:06' '08:48:35']
+ ['09:53:36' '09:56:05']
+ ['08:33:36' '08:36:05']
+ ['10:06:06' '10:08:35']
+ ['08:21:06' '08:23:35']
+ ['10:18:36' '10:21:05']]
+INFO:root:Comparing query and source audio...
+INFO:root:Corr: 0.5300899147987366 Start: 35         Stop: 45        
+INFO:root:['09:23:36' '09:26:05']
+INFO:root:Corr: 0.8551565408706665 Start: 54         Stop: 64        
+INFO:root:['09:03:36' '09:06:05']
+INFO:root:Corr: 0.7118353247642517 Start: 65         Stop: 75        
+INFO:root:['09:36:06' '09:38:35']
+INFO:root:Corr: 0.7941554188728333 Start: 101        Stop: 111       
+INFO:root:['08:51:06' '08:53:35']
+INFO:root:Corr: 0.5399442315101624 Start: 64         Stop: 74        
+INFO:root:['09:48:36' '09:51:05']
+INFO:root:Corr: 0.9691298007965088 Start: 101        Stop: 111       
+INFO:root:['08:38:36' '08:41:05']
+INFO:root:Corr: 0.9882115721702576 Start: 41         Stop: 51        
+INFO:root:['10:01:06' '10:03:35']
+INFO:root:Corr: 1.0209851264953613 Start: 99         Stop: 109       
+INFO:root:['08:26:06' '08:28:35']
+INFO:root:Peak: (128.3, 2.6e-01)
+INFO:root:Not in ['10:13:36' '10:16:05']
+INFO:root:Corr: 0.5263113379478455 Start: 126        Stop: 136       
+INFO:root:['08:13:36' '08:16:05']
+INFO:root:Corr: 0.6285170316696167 Start: 11         Stop: 21        
+INFO:root:['09:18:36' '09:21:05']
+INFO:root:Corr: 0.8054922223091125 Start: 9          Stop: 19        
+INFO:root:['09:08:36' '09:11:05']
+INFO:root:Corr: 0.814501941204071 Start: 134        Stop: 144       
+INFO:root:['09:31:06' '09:33:35']
+INFO:root:Corr: 1.4855904579162598 Start: 95         Stop: 105       
+INFO:root:['08:56:06' '08:58:35']
+INFO:root:Corr: 1.0726065635681152 Start: 51         Stop: 61        
+INFO:root:['09:43:36' '09:46:05']
+INFO:root:Corr: 0.8339608907699585 Start: 97         Stop: 107       
+INFO:root:['08:43:36' '08:46:05']
+INFO:root:Corr: 0.9164683222770691 Start: 122        Stop: 132       
+INFO:root:['09:56:06' '09:58:35']
+INFO:root:Corr: 0.5774692296981812 Start: 23         Stop: 33        
+INFO:root:['08:31:06' '08:33:35']
+INFO:root:Peak: (73.5, 4.5e-01)
+INFO:root:Not in ['10:08:36' '10:11:05']
+INFO:root:Corr: 0.567845344543457 Start: 10         Stop: 20        
+INFO:root:['08:18:36' '08:21:05']
+INFO:root:Corr: 0.6796332597732544 Start: 137        Stop: 147       
+INFO:root:['08:11:06' '08:13:35']
+INFO:root:Corr: 0.6225384473800659 Start: 33         Stop: 43        
+INFO:root:['09:13:36' '09:16:05']
+INFO:root:Corr: 0.5936467051506042 Start: 99         Stop: 109       
+INFO:root:['09:26:06' '09:28:35']
+INFO:root:Corr: 1.0420831441879272 Start: 2          Stop: 12        
+INFO:root:['09:01:06' '09:03:35']
+INFO:root:Corr: 0.679059624671936 Start: 43         Stop: 53        
+INFO:root:['09:38:36' '09:41:05']
+INFO:root:Corr: 0.693671703338623 Start: 107        Stop: 117       
+INFO:root:['08:48:36' '08:51:05']
+INFO:root:Corr: 0.8096457719802856 Start: 32         Stop: 42        
+INFO:root:['09:51:06' '09:53:35']
+INFO:root:Corr: 0.703174352645874 Start: 81         Stop: 91        
+INFO:root:['08:36:06' '08:38:35']
+INFO:root:Corr: 0.8091431260108948 Start: 64         Stop: 74        
+INFO:root:['10:03:36' '10:06:05']
+INFO:root:Corr: 1.1430214643478394 Start: 44         Stop: 54        
+INFO:root:['08:23:36' '08:26:05']
+INFO:root:Peak: (21.8, 2.7e-01)
+INFO:root:Not in ['10:16:06' '10:18:35']
+INFO:root:Corr: 0.8076891303062439 Start: 46         Stop: 56        
+INFO:root:['08:08:36' '08:11:05']
+INFO:root:Corr: 1.9053750038146973 Start: 87         Stop: 97        
+INFO:root:['09:21:06' '09:23:35']
+INFO:root:Peak: (124.9, 4.3e-01)
+INFO:root:Not in ['09:06:06' '09:08:35']
+INFO:root:Corr: 1.0935664176940918 Start: 83         Stop: 93        
+INFO:root:['09:33:36' '09:36:05']
+INFO:root:Corr: 0.7196412682533264 Start: 89         Stop: 99        
+INFO:root:['08:53:36' '08:56:05']
+INFO:root:Corr: 0.6350745558738708 Start: 66         Stop: 76        
+INFO:root:['09:46:06' '09:48:35']
+INFO:root:Corr: 0.6076514720916748 Start: 120        Stop: 130       
+INFO:root:['08:41:06' '08:43:35']
+INFO:root:Corr: 0.6842555403709412 Start: 143        Stop: 153       
+INFO:root:['09:58:36' '10:01:05']
+INFO:root:Corr: 1.818197250366211 Start: 89         Stop: 99        
+INFO:root:['08:28:36' '08:31:05']
+INFO:root:Peak: (70.7, 4.1e-01)
+INFO:root:Not in ['10:11:06' '10:13:35']
+INFO:root:Corr: 0.8296414613723755 Start: 45         Stop: 55        
+INFO:root:['08:16:06' '08:18:35']
+INFO:root:Peak: (32.6, 4.8e-01)
+INFO:root:Not in ['09:11:06' '09:13:35']
+INFO:root:Peak: (42.6, 4.9e-01)
+INFO:root:Not in ['09:28:36' '09:31:05']
+INFO:root:Corr: 1.308565378189087 Start: 17         Stop: 27        
+INFO:root:['08:58:36' '09:01:05']
+INFO:root:Corr: 0.7698764204978943 Start: -1         Stop: 9         
+INFO:root:['09:41:06' '09:43:35']
+INFO:root:Corr: 0.7978986501693726 Start: 47         Stop: 57        
+INFO:root:['08:46:06' '08:48:35']
+INFO:root:Corr: 0.7939672470092773 Start: 116        Stop: 126       
+INFO:root:['09:53:36' '09:56:05']
+INFO:root:Corr: 1.191582441329956 Start: 64         Stop: 74        
+INFO:root:['08:33:36' '08:36:05']
+INFO:root:Corr: 1.3153842687606812 Start: 37         Stop: 47        
+INFO:root:['10:06:06' '10:08:35']
+INFO:root:
+        nbins: 53       binwidth:      150 start offset:    29315
+        
+INFO:root:[['09:16:06' '09:18:35']
+ ['09:23:36' '09:26:05']
+ ['09:03:36' '09:06:05']
+ ['09:36:06' '09:38:35']
+ ['08:51:06' '08:53:35']
+ ['09:48:36' '09:51:05']
+ ['08:38:36' '08:41:05']
+ ['10:01:06' '10:03:35']
+ ['08:26:06' '08:28:35']
+ ['10:13:36' '10:16:05']
+ ['08:13:36' '08:16:05']
+ ['09:18:36' '09:21:05']
+ ['09:08:36' '09:11:05']
+ ['09:31:06' '09:33:35']
+ ['08:56:06' '08:58:35']
+ ['09:43:36' '09:46:05']
+ ['08:43:36' '08:46:05']
+ ['09:56:06' '09:58:35']
+ ['08:31:06' '08:33:35']
+ ['10:08:36' '10:11:05']
+ ['08:18:36' '08:21:05']
+ ['08:11:06' '08:13:35']
+ ['09:13:36' '09:16:05']
+ ['09:26:06' '09:28:35']
+ ['09:01:06' '09:03:35']
+ ['09:38:36' '09:41:05']
+ ['08:48:36' '08:51:05']
+ ['09:51:06' '09:53:35']
+ ['08:36:06' '08:38:35']
+ ['10:03:36' '10:06:05']
+ ['08:23:36' '08:26:05']
+ ['10:16:06' '10:18:35']
+ ['08:08:36' '08:11:05']
+ ['09:21:06' '09:23:35']
+ ['09:06:06' '09:08:35']
+ ['09:33:36' '09:36:05']
+ ['08:53:36' '08:56:05']
+ ['09:46:06' '09:48:35']
+ ['08:41:06' '08:43:35']
+ ['09:58:36' '10:01:05']
+ ['08:28:36' '08:31:05']
+ ['10:11:06' '10:13:35']
+ ['08:16:06' '08:18:35']
+ ['09:11:06' '09:13:35']
+ ['09:28:36' '09:31:05']
+ ['08:58:36' '09:01:05']
+ ['09:41:06' '09:43:35']
+ ['08:46:06' '08:48:35']
+ ['09:53:36' '09:56:05']
+ ['08:33:36' '08:36:05']
+ ['10:06:06' '10:08:35']
+ ['08:21:06' '08:23:35']
+ ['10:18:36' '10:21:05']]
+INFO:root:iDiKUBSydGE_1.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_2.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_3.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_4.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_5.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_6.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_7.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_8.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_9.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_10.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_11.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_12.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_13.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_14.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_15.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_16.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_17.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_18.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_19.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_20.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_21.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_22.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_23.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_24.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_25.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_26.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_27.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_28.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_29.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_30.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_31.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_32.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_33.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_34.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_35.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_36.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_37.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_38.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_39.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_40.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_41.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_42.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_43.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_44.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_45.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_46.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_47.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_48.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_49.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_50.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Comparing query and source audio...
+INFO:root:Corr: 0.5300899147987366 Start: 35         Stop: 45        
+INFO:root:['09:23:36' '09:26:05']
+INFO:root:Corr: 0.8551565408706665 Start: 54         Stop: 64        
+INFO:root:['09:03:36' '09:06:05']
+INFO:root:Corr: 0.7118353247642517 Start: 65         Stop: 75        
+INFO:root:['09:36:06' '09:38:35']
+INFO:root:Corr: 0.7941554188728333 Start: 101        Stop: 111       
+INFO:root:['08:51:06' '08:53:35']
+INFO:root:Corr: 0.5399442315101624 Start: 64         Stop: 74        
+INFO:root:['09:48:36' '09:51:05']
+INFO:root:Corr: 0.9691298007965088 Start: 101        Stop: 111       
+INFO:root:['08:38:36' '08:41:05']
+INFO:root:Corr: 0.9882115721702576 Start: 41         Stop: 51        
+INFO:root:['10:01:06' '10:03:35']
+INFO:root:Corr: 1.0209851264953613 Start: 99         Stop: 109       
+INFO:root:['08:26:06' '08:28:35']
+INFO:root:Peak: (128.3, 2.6e-01)
+INFO:root:Not in ['10:13:36' '10:16:05']
+INFO:root:Corr: 0.5263113379478455 Start: 126        Stop: 136       
+INFO:root:['08:13:36' '08:16:05']
+INFO:root:Corr: 0.6285170316696167 Start: 11         Stop: 21        
+INFO:root:['09:18:36' '09:21:05']
+INFO:root:Corr: 0.8054922223091125 Start: 9          Stop: 19        
+INFO:root:['09:08:36' '09:11:05']
+INFO:root:Corr: 0.814501941204071 Start: 134        Stop: 144       
+INFO:root:['09:31:06' '09:33:35']
+INFO:root:Corr: 1.4855904579162598 Start: 95         Stop: 105       
+INFO:root:['08:56:06' '08:58:35']
+INFO:root:Corr: 1.0726065635681152 Start: 51         Stop: 61        
+INFO:root:['09:43:36' '09:46:05']
+INFO:root:Corr: 0.8339608907699585 Start: 97         Stop: 107       
+INFO:root:['08:43:36' '08:46:05']
+INFO:root:Corr: 0.9164683222770691 Start: 122        Stop: 132       
+INFO:root:['09:56:06' '09:58:35']
+INFO:root:Corr: 0.5774692296981812 Start: 23         Stop: 33        
+INFO:root:['08:31:06' '08:33:35']
+INFO:root:Peak: (73.5, 4.5e-01)
+INFO:root:Not in ['10:08:36' '10:11:05']
+INFO:root:Corr: 0.567845344543457 Start: 10         Stop: 20        
+INFO:root:['08:18:36' '08:21:05']
+INFO:root:Corr: 0.6796332597732544 Start: 137        Stop: 147       
+INFO:root:['08:11:06' '08:13:35']
+INFO:root:Corr: 0.6225384473800659 Start: 33         Stop: 43        
+INFO:root:['09:13:36' '09:16:05']
+INFO:root:Corr: 0.5936467051506042 Start: 99         Stop: 109       
+INFO:root:['09:26:06' '09:28:35']
+INFO:root:Corr: 1.0420831441879272 Start: 2          Stop: 12        
+INFO:root:['09:01:06' '09:03:35']
+INFO:root:Corr: 0.679059624671936 Start: 43         Stop: 53        
+INFO:root:['09:38:36' '09:41:05']
+INFO:root:Corr: 0.693671703338623 Start: 107        Stop: 117       
+INFO:root:['08:48:36' '08:51:05']
+INFO:root:Corr: 0.8096457719802856 Start: 32         Stop: 42        
+INFO:root:['09:51:06' '09:53:35']
+INFO:root:Corr: 0.703174352645874 Start: 81         Stop: 91        
+INFO:root:['08:36:06' '08:38:35']
+INFO:root:Corr: 0.8091431260108948 Start: 64         Stop: 74        
+INFO:root:['10:03:36' '10:06:05']
+INFO:root:Corr: 1.1430214643478394 Start: 44         Stop: 54        
+INFO:root:['08:23:36' '08:26:05']
+INFO:root:Peak: (21.8, 2.7e-01)
+INFO:root:Not in ['10:16:06' '10:18:35']
+INFO:root:Corr: 0.8076891303062439 Start: 46         Stop: 56        
+INFO:root:['08:08:36' '08:11:05']
+INFO:root:Corr: 1.9053750038146973 Start: 87         Stop: 97        
+INFO:root:['09:21:06' '09:23:35']
+INFO:root:Peak: (124.9, 4.3e-01)
+INFO:root:Not in ['09:06:06' '09:08:35']
+INFO:root:Corr: 1.0935664176940918 Start: 83         Stop: 93        
+INFO:root:['09:33:36' '09:36:05']
+INFO:root:Corr: 0.7196412682533264 Start: 89         Stop: 99        
+INFO:root:['08:53:36' '08:56:05']
+INFO:root:Corr: 0.6350745558738708 Start: 66         Stop: 76        
+INFO:root:['09:46:06' '09:48:35']
+INFO:root:Corr: 0.6076514720916748 Start: 120        Stop: 130       
+INFO:root:['08:41:06' '08:43:35']
+INFO:root:Corr: 0.6842555403709412 Start: 143        Stop: 153       
+INFO:root:['09:58:36' '10:01:05']
+INFO:root:Corr: 1.818197250366211 Start: 89         Stop: 99        
+INFO:root:['08:28:36' '08:31:05']
+INFO:root:Peak: (70.7, 4.1e-01)
+INFO:root:Not in ['10:11:06' '10:13:35']
+INFO:root:Corr: 0.8296414613723755 Start: 45         Stop: 55        
+INFO:root:['08:16:06' '08:18:35']
+INFO:root:Peak: (32.6, 4.8e-01)
+INFO:root:Not in ['09:11:06' '09:13:35']
+INFO:root:Peak: (42.6, 4.9e-01)
+INFO:root:Not in ['09:28:36' '09:31:05']
+INFO:root:Corr: 1.308565378189087 Start: 17         Stop: 27        
+INFO:root:['08:58:36' '09:01:05']
+INFO:root:Corr: 0.7698764204978943 Start: -1         Stop: 9         
+INFO:root:['09:41:06' '09:43:35']
+INFO:root:Corr: 0.7978986501693726 Start: 47         Stop: 57        
+INFO:root:['08:46:06' '08:48:35']
+INFO:root:Corr: 0.7939672470092773 Start: 116        Stop: 126       
+INFO:root:['09:53:36' '09:56:05']
+INFO:root:Corr: 1.191582441329956 Start: 64         Stop: 74        
+INFO:root:['08:33:36' '08:36:05']
+INFO:root:Corr: 1.3153842687606812 Start: 37         Stop: 47        
+INFO:root:['10:06:06' '10:08:35']
+INFO:root:
+        nbins: 53       binwidth:      150 start offset:    29315
+        
+INFO:root:[['09:16:06' '09:18:35']
+ ['09:23:36' '09:26:05']
+ ['09:03:36' '09:06:05']
+ ['09:36:06' '09:38:35']
+ ['08:51:06' '08:53:35']
+ ['09:48:36' '09:51:05']
+ ['08:38:36' '08:41:05']
+ ['10:01:06' '10:03:35']
+ ['08:26:06' '08:28:35']
+ ['10:13:36' '10:16:05']
+ ['08:13:36' '08:16:05']
+ ['09:18:36' '09:21:05']
+ ['09:08:36' '09:11:05']
+ ['09:31:06' '09:33:35']
+ ['08:56:06' '08:58:35']
+ ['09:43:36' '09:46:05']
+ ['08:43:36' '08:46:05']
+ ['09:56:06' '09:58:35']
+ ['08:31:06' '08:33:35']
+ ['10:08:36' '10:11:05']
+ ['08:18:36' '08:21:05']
+ ['08:11:06' '08:13:35']
+ ['09:13:36' '09:16:05']
+ ['09:26:06' '09:28:35']
+ ['09:01:06' '09:03:35']
+ ['09:38:36' '09:41:05']
+ ['08:48:36' '08:51:05']
+ ['09:51:06' '09:53:35']
+ ['08:36:06' '08:38:35']
+ ['10:03:36' '10:06:05']
+ ['08:23:36' '08:26:05']
+ ['10:16:06' '10:18:35']
+ ['08:08:36' '08:11:05']
+ ['09:21:06' '09:23:35']
+ ['09:06:06' '09:08:35']
+ ['09:33:36' '09:36:05']
+ ['08:53:36' '08:56:05']
+ ['09:46:06' '09:48:35']
+ ['08:41:06' '08:43:35']
+ ['09:58:36' '10:01:05']
+ ['08:28:36' '08:31:05']
+ ['10:11:06' '10:13:35']
+ ['08:16:06' '08:18:35']
+ ['09:11:06' '09:13:35']
+ ['09:28:36' '09:31:05']
+ ['08:58:36' '09:01:05']
+ ['09:41:06' '09:43:35']
+ ['08:46:06' '08:48:35']
+ ['09:53:36' '09:56:05']
+ ['08:33:36' '08:36:05']
+ ['10:06:06' '10:08:35']
+ ['08:21:06' '08:23:35']
+ ['10:18:36' '10:21:05']]
+INFO:root:iDiKUBSydGE_1.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_2.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_3.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_4.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_5.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_6.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_7.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_8.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_9.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_10.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_11.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_12.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_13.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_14.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_15.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_16.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_17.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_18.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_19.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_20.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_21.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_22.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_23.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_24.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_25.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_26.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_27.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_28.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_29.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_30.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_31.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_32.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_33.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_34.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_35.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_36.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_37.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_38.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_39.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_40.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_41.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_42.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_43.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_44.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_45.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_46.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_47.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_48.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_49.m4a already exists.
+Ignoring...
+INFO:root:iDiKUBSydGE_50.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Comparing query and source audio...
+INFO:root:Corr: 0.5300899147987366 Start: 35         Stop: 45        
+INFO:root:['09:23:36' '09:26:05']
+INFO:root:Corr: 0.8551565408706665 Start: 54         Stop: 64        
+INFO:root:['09:03:36' '09:06:05']
+INFO:root:Corr: 0.7118353247642517 Start: 65         Stop: 75        
+INFO:root:['09:36:06' '09:38:35']
+INFO:root:Corr: 0.7941554188728333 Start: 101        Stop: 111       
+INFO:root:['08:51:06' '08:53:35']
+INFO:root:Corr: 0.5399442315101624 Start: 64         Stop: 74        
+INFO:root:['09:48:36' '09:51:05']
+INFO:root:Corr: 0.9691298007965088 Start: 101        Stop: 111       
+INFO:root:['08:38:36' '08:41:05']
+INFO:root:Corr: 0.9882115721702576 Start: 41         Stop: 51        
+INFO:root:['10:01:06' '10:03:35']
+INFO:root:Corr: 1.0209851264953613 Start: 99         Stop: 109       
+INFO:root:['08:26:06' '08:28:35']
+INFO:root:Peak: (128.3, 2.6e-01)
+INFO:root:Not in ['10:13:36' '10:16:05']
+INFO:root:Corr: 0.5263113379478455 Start: 126        Stop: 136       
+INFO:root:['08:13:36' '08:16:05']
+INFO:root:Corr: 0.6285170316696167 Start: 11         Stop: 21        
+INFO:root:['09:18:36' '09:21:05']
+INFO:root:Corr: 0.8054922223091125 Start: 9          Stop: 19        
+INFO:root:['09:08:36' '09:11:05']
+INFO:root:Corr: 0.814501941204071 Start: 134        Stop: 144       
+INFO:root:['09:31:06' '09:33:35']
+INFO:root:Corr: 1.4855904579162598 Start: 95         Stop: 105       
+INFO:root:['08:56:06' '08:58:35']
+INFO:root:Corr: 1.0726065635681152 Start: 51         Stop: 61        
+INFO:root:['09:43:36' '09:46:05']
+INFO:root:Corr: 0.8339608907699585 Start: 97         Stop: 107       
+INFO:root:['08:43:36' '08:46:05']
+INFO:root:Corr: 0.9164683222770691 Start: 122        Stop: 132       
+INFO:root:['09:56:06' '09:58:35']
+INFO:root:Corr: 0.5774692296981812 Start: 23         Stop: 33        
+INFO:root:['08:31:06' '08:33:35']
+INFO:root:Peak: (73.5, 4.5e-01)
+INFO:root:Not in ['10:08:36' '10:11:05']
+INFO:root:Corr: 0.567845344543457 Start: 10         Stop: 20        
+INFO:root:['08:18:36' '08:21:05']
+INFO:root:Corr: 0.6796332597732544 Start: 137        Stop: 147       
+INFO:root:['08:11:06' '08:13:35']
+INFO:root:Corr: 0.6225384473800659 Start: 33         Stop: 43        
+INFO:root:['09:13:36' '09:16:05']
+INFO:root:Corr: 0.5936467051506042 Start: 99         Stop: 109       
+INFO:root:['09:26:06' '09:28:35']
+INFO:root:Corr: 1.0420831441879272 Start: 2          Stop: 12        
+INFO:root:['09:01:06' '09:03:35']
+INFO:root:Corr: 0.679059624671936 Start: 43         Stop: 53        
+INFO:root:['09:38:36' '09:41:05']
+INFO:root:Corr: 0.693671703338623 Start: 107        Stop: 117       
+INFO:root:['08:48:36' '08:51:05']
+INFO:root:Corr: 0.8096457719802856 Start: 32         Stop: 42        
+INFO:root:['09:51:06' '09:53:35']
+INFO:root:Corr: 0.703174352645874 Start: 81         Stop: 91        
+INFO:root:['08:36:06' '08:38:35']
+INFO:root:Corr: 0.8091431260108948 Start: 64         Stop: 74        
+INFO:root:['10:03:36' '10:06:05']
+INFO:root:Corr: 1.1430214643478394 Start: 44         Stop: 54        
+INFO:root:['08:23:36' '08:26:05']
+INFO:root:Peak: (21.8, 2.7e-01)
+INFO:root:Not in ['10:16:06' '10:18:35']
+INFO:root:Corr: 0.8076891303062439 Start: 46         Stop: 56        
+INFO:root:['08:08:36' '08:11:05']
+INFO:root:Corr: 1.9053750038146973 Start: 87         Stop: 97        
+INFO:root:['09:21:06' '09:23:35']
+INFO:root:Peak: (124.9, 4.3e-01)
+INFO:root:Not in ['09:06:06' '09:08:35']
+INFO:root:Corr: 1.0935664176940918 Start: 83         Stop: 93        
+INFO:root:['09:33:36' '09:36:05']
+INFO:root:Corr: 0.7196412682533264 Start: 89         Stop: 99        
+INFO:root:['08:53:36' '08:56:05']
+INFO:root:Corr: 0.6350745558738708 Start: 66         Stop: 76        
+INFO:root:['09:46:06' '09:48:35']
+INFO:root:Corr: 0.6076514720916748 Start: 120        Stop: 130       
+INFO:root:['08:41:06' '08:43:35']
+INFO:root:Corr: 0.6842555403709412 Start: 143        Stop: 153       
+INFO:root:['09:58:36' '10:01:05']
+INFO:root:Corr: 1.818197250366211 Start: 89         Stop: 99        
+INFO:root:['08:28:36' '08:31:05']
+INFO:root:Peak: (70.7, 4.1e-01)
+INFO:root:Not in ['10:11:06' '10:13:35']
+INFO:root:Corr: 0.8296414613723755 Start: 45         Stop: 55        
+INFO:root:['08:16:06' '08:18:35']
+INFO:root:Peak: (32.6, 4.8e-01)
+INFO:root:Not in ['09:11:06' '09:13:35']
+INFO:root:Peak: (42.6, 4.9e-01)
+INFO:root:Not in ['09:28:36' '09:31:05']
+INFO:root:Corr: 1.308565378189087 Start: 17         Stop: 27        
+INFO:root:['08:58:36' '09:01:05']
+INFO:root:Corr: 0.7698764204978943 Start: -1         Stop: 9         
+INFO:root:['09:41:06' '09:43:35']
+INFO:root:Corr: 0.7978986501693726 Start: 47         Stop: 57        
+INFO:root:['08:46:06' '08:48:35']
+INFO:root:Corr: 0.7939672470092773 Start: 116        Stop: 126       
+INFO:root:['09:53:36' '09:56:05']
+INFO:root:Corr: 1.191582441329956 Start: 64         Stop: 74        
+INFO:root:['08:33:36' '08:36:05']
+INFO:root:Corr: 1.3153842687606812 Start: 37         Stop: 47        
+INFO:root:['10:06:06' '10:08:35']

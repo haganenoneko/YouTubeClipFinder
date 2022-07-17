@@ -1,5 +1,6 @@
 import math
 import logging
+from multiprocessing.sharedctypes import Value
 import audiofile
 import numpy as np
 from pathlib import Path
@@ -110,6 +111,11 @@ class FindSignal:
                 'how_argmax', how_argmax, ['whole', 'inds']
             )
 
+        if not isinstance(query, np.ndarray):
+            raise ValueError(
+                f"Query must be np.ndarray, not {type(query)}"
+            )
+
         self.data = data
         self.query = query
         self.rate = rate
@@ -157,7 +163,17 @@ class FindSignal:
     def findsignal(self, how='xcorr', plot=False) -> Tuple[tuple, float]:
 
         if how == 'xcorr':
-            res = correlate(self.data, self.query, method='fft')
+            try:
+                res = correlate(self.data, self.query, method='fft')
+            except ValueError as e:
+                print(
+                    f"""
+                    Shape: {self.data.shape},
+                    Query: {self.query.shape}
+                    """
+                )
+                raise ValueError(e)
+
             peak = np.max(res)
         else:
             raise NotImplementedError()

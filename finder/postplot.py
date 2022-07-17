@@ -8,6 +8,7 @@ from typing import List, Union, Tuple
 from datetime import datetime, timedelta
 
 from finder.main import Finder
+from finder.common import str2td 
 
 # ---------------------------------------------------------------------------- #
 #         Post-processing and visualization of candidates in a log file        #
@@ -53,6 +54,7 @@ def parse_ts(s: str) -> List[datetime]:
 
 class ReadLog:
     def __init__(self, path: Union[str, Path]) -> None:
+        # self.source_start = str2td(source_start)
         self.log = path
 
     def validate_path(self, path: Union[str, Path]) -> bool:
@@ -62,7 +64,7 @@ class ReadLog:
         elif isinstance(path, Path):
             pass
         else:
-            raise TypeError
+            raise TypeError(f"Unexpected type for log path: {type(path)}")
 
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -99,14 +101,17 @@ class ReadLog:
                 continue
 
             parsed.append(
-                (bin[0] + timedelta(seconds=start), corr)
+                (bin[0], corr)
             )
         return parsed
 
     def _savecsv(self, outpath: str, parsed: np.ndarray, sort: bool) -> None:
 
         df = pd.DataFrame(parsed, columns=['Time', 'Correlation'])
-        df['Time'] = pd.to_datetime(df['Time']).dt.strftime("%H:%M:%S")
+        
+        df['Time'] = (
+            pd.to_datetime(df['Time']) 
+        ).dt.strftime("%H:%M:%S")
 
         if sort:
             df.sort_values(

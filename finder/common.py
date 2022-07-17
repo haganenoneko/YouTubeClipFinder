@@ -3,7 +3,7 @@ from typing import List, Tuple
 import matplotlib.pyplot as plt 
 from matplotlib.dates import DateFormatter
 
-from datetime import datetime
+from datetime import datetime, timedelta 
 from numpy import vectorize
 import time
 
@@ -43,6 +43,10 @@ def str2hms(t: str) -> datetime:
 
 def hms2str(s: datetime) -> str:
     return datetime.strftime(s, "%H:%M:%S")
+
+def str2td(s: str) -> timedelta:
+    t = str2hms(s)
+    return timedelta(hours=t.hour, minutes=t.minute, seconds=t.second)
 
 # --------------------------------- Plotting --------------------------------- #
 

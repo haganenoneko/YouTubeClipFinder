@@ -1,0 +1,141 @@
+INFO:root:
+        nbins: 28       binwidth:      150 start offset:     1800
+        
+INFO:root:[['01:05:01' '01:07:30']
+ ['01:12:31' '01:15:00']
+ ['00:52:31' '00:55:00']
+ ['01:25:01' '01:27:30']
+ ['00:40:01' '00:42:30']
+ ['01:37:31' '01:40:00']
+ ['01:07:31' '01:10:00']
+ ['00:57:31' '01:00:00']
+ ['01:20:01' '01:22:30']
+ ['00:45:01' '00:47:30']
+ ['01:32:31' '01:35:00']
+ ['00:32:31' '00:35:00']
+ ['01:02:31' '01:05:00']
+ ['01:15:01' '01:17:30']
+ ['00:50:01' '00:52:30']
+ ['01:27:31' '01:30:00']
+ ['00:37:31' '00:40:00']
+ ['00:30:01' '00:32:30']
+ ['01:10:01' '01:12:30']
+ ['00:55:01' '00:57:30']
+ ['01:22:31' '01:25:00']
+ ['00:42:31' '00:45:00']
+ ['01:35:01' '01:37:30']
+ ['01:00:01' '01:02:30']
+ ['01:17:31' '01:20:00']
+ ['00:47:31' '00:50:00']
+ ['01:30:01' '01:32:30']
+ ['00:35:01' '00:37:30']]
+INFO:root:KcGCu8GZYpE_1.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_2.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_3.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_4.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_5.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_6.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_7.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_8.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_9.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_10.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_11.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_12.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_13.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_14.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_15.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_16.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_17.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_18.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_19.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_20.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_21.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_22.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_23.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_24.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_25.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_26.m4a already exists.
+Ignoring...
+INFO:root:KcGCu8GZYpE_27.m4a already exists.
+Ignoring...
+INFO:root:All bins already exist on the file system.
+INFO:root:Comparing query and source audio...
+INFO:root:Corr: 0.741064190864563 Start: 38         Stop: 44        
+INFO:root:['01:12:31' '01:15:00']
+INFO:root:Corr: 0.757665753364563 Start: 65         Stop: 71        
+INFO:root:['00:52:31' '00:55:00']
+INFO:root:Corr: 0.6264910697937012 Start: 137        Stop: 143       
+INFO:root:['01:25:01' '01:27:30']
+INFO:root:Corr: 0.9261462688446045 Start: 122        Stop: 128       
+INFO:root:['00:40:01' '00:42:30']
+INFO:root:Corr: 0.5178495049476624 Start: 92         Stop: 98        
+INFO:root:['01:37:31' '01:40:00']
+INFO:root:Corr: 0.8675267696380615 Start: 106        Stop: 112       
+INFO:root:['01:07:31' '01:10:00']
+INFO:root:Corr: 0.5120220184326172 Start: 117        Stop: 123       
+INFO:root:['00:57:31' '01:00:00']
+INFO:root:Corr: 0.7040545344352722 Start: 122        Stop: 128       
+INFO:root:['01:20:01' '01:22:30']
+INFO:root:Corr: 0.646443247795105 Start: 110        Stop: 116       
+INFO:root:['00:45:01' '00:47:30']
+INFO:root:Corr: 0.6007939577102661 Start: 69         Stop: 75        
+INFO:root:['01:32:31' '01:35:00']
+INFO:root:Corr: 0.692808210849762 Start: 18         Stop: 24        
+INFO:root:['00:32:31' '00:35:00']
+INFO:root:Corr: 0.7331172227859497 Start: 89         Stop: 95        
+INFO:root:['01:02:31' '01:05:00']
+INFO:root:Corr: 0.6206589937210083 Start: 9          Stop: 15        
+INFO:root:['01:15:01' '01:17:30']
+INFO:root:Corr: 0.7275201082229614 Start: 64         Stop: 70        
+INFO:root:['00:50:01' '00:52:30']
+INFO:root:Corr: 0.6723545789718628 Start: 138        Stop: 144       
+INFO:root:['01:27:31' '01:30:00']
+INFO:root:Corr: 1.5329946279525757 Start: 136        Stop: 142       
+INFO:root:['00:37:31' '00:40:00']
+INFO:root:Corr: 0.7346615791320801 Start: 84         Stop: 90        
+INFO:root:['00:30:01' '00:32:30']
+INFO:root:Corr: 0.6763685941696167 Start: 140        Stop: 146       
+INFO:root:['01:10:01' '01:12:30']
+INFO:root:Peak: (79.4, 4.3e-01)
+INFO:root:Not in ['00:55:01' '00:57:30']
+INFO:root:Corr: 0.7667065262794495 Start: 11         Stop: 17        
+INFO:root:['01:22:31' '01:25:00']
+INFO:root:Peak: (108.6, 5.0e-01)
+INFO:root:Not in ['00:42:31' '00:45:00']
+INFO:root:Corr: 0.6377348899841309 Start: 131        Stop: 137       
+INFO:root:['01:35:01' '01:37:30']
+INFO:root:Corr: 0.5229159593582153 Start: 106        Stop: 112       
+INFO:root:['01:00:01' '01:02:30']
+INFO:root:Peak: (9.8, 4.2e-01)
+INFO:root:Not in ['01:17:31' '01:20:00']
+INFO:root:Corr: 0.7958077192306519 Start: 24         Stop: 30        
+INFO:root:['00:47:31' '00:50:00']
+INFO:root:Peak: (78.9, 3.6e-01)
+INFO:root:Not in ['01:30:01' '01:32:30']
+INFO:root:Corr: 0.6716693639755249 Start: 62         Stop: 68        
+INFO:root:['00:35:01' '00:37:30']

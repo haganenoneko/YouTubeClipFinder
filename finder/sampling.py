@@ -111,7 +111,7 @@ def get_bins(
         skipsize: int = 0,
         min_binwidth: int = 30,
         max_binwidth: int = 120,
-        clip_edges: int = 60,
+        start_delta: int = 0,
         plot=False) -> np.ndarray:
     """Get bins containing start and stop times that cover the given duration
 
@@ -122,7 +122,7 @@ def get_bins(
         skipsize (int, optional): number of bins to skip between `i` and `i+1`-th elements of the final sequence of bins. Defaults to 0.
         min_binwidth (int, optional): minimum bin duration. Defaults to 30.
         max_binwidth (int, optional): maximum bin duration. Defaults to 120.
-        clip_edges (int, optional): number of seconds to clip from the edges. Defaults to 60 (1 minute).
+        start_delta (int, optional): offset for beginning. Defaults to 0.
         plot (bool, optional): whether to plot bin order and duration. Defaults to False.
 
     Returns:
@@ -137,10 +137,6 @@ def get_bins(
         )
 
     bins: List[List[int]] = []
-
-    if clip_edges > 0:
-        duration -= 2*clip_edges
-
     binwidth = math.floor(duration / nbins)
 
     if binwidth < min_binwidth:
@@ -150,8 +146,10 @@ def get_bins(
 
     nbins = math.floor(duration / binwidth)
 
-    logging.info(
-        f"nbins: {nbins:<8} binwidth: {binwidth:>8} edge clip: {clip_edges:>8}"
+    print(
+        f"""
+        nbins: {nbins:<8} binwidth: {binwidth:>8} start offset: {start_delta:>8}
+        """
     )
 
     bininds = np.arange(1, nbins+1)
@@ -186,9 +184,9 @@ def get_bins(
     if plot:
         _plotbins(bins)
 
-    return np.array(bins) + clip_edges
-
+    # N x 2 array
+    return np.array(bins) + start_delta 
 
 def bins2str(bin_arr: np.ndarray) -> np.ndarray:
-    print(f"Min Time: {np.min(bin_arr):<8} Max Time: {np.max(bin_arr):<8}")
+    print(f"Min Time: {np.min(bin_arr[:,0]):<8} Max Time: {np.max(bin_arr[:,1]):<8}")
     return vec_seconds2str(bin_arr)

@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 import validators
 import time
 import logging
@@ -14,7 +15,7 @@ from typing import List, Tuple, Union
 
 from finder import sampling
 from finder.download import get_cmd, run_cmd
-from finder.common import str2hms, create_figure
+from finder.common import str2hms, str2td, create_figure
 from finder.findsignal import FindSignal, read_audio_data
 
 # ---------------------------------------------------------------------------- #
@@ -32,27 +33,33 @@ class Finder:
             self,
             source: str,
             query: Union[str, np.ndarray],
-            logname: str = None,
+            source_start: str=None, 
+            source_stop: str=None, 
             **query_kwargs) -> None:
 
         self.url = source
-        self.query = self.get_query(
-            query, **query_kwargs)
+        
+        self._source_start_stop = (source_start, source_stop)
+        
+        self.query = self.get_query(query, **query_kwargs)
         self.create_logger()
         
     def get_query(
             self,
-            query: Union[str, np.ndarray],
+            query: Union[str, Path, np.ndarray],
             **query_kwargs) -> np.ndarray:
 
         if isinstance(query, np.ndarray):
             return query
-        elif not isinstance(query, str):
+        elif isinstance(query, (Path, str)):
+            pass 
+        else:
             raise TypeError(
-                f"`query` must be of type `np.ndarray` or `str`, not {type(query)}"
+                f"`query` must be a numpy array or path-like object,\
+                not {type(query)}"
             )        
 
-        if validators.url(query):
+        if validators.url(str(query)):
             cmd, fn = get_cmd(query, **query_kwargs)
             fn = Path(fn)
             self.logname = fn.stem 
@@ -64,10 +71,23 @@ class Finder:
                 return self.load_query(fn)
             except FileNotFoundError:
                 raise FileNotFoundError(f"Query: {str(fn):>8}")
-        else:
+
+        if isinstance(query, str):
             pquery = Path(query)
+        else:
+            pquery: Path = query 
+        
+        if pquery.is_file():
             self.logname = pquery.stem
-            return self.load_query(pquery)[0]
+            query_data = self.load_query(pquery)
+            
+            if not isinstance(query_data, np.ndarray):
+                print(query_data[0])
+                raise ValueError()
+            else:
+                return query_data             
+        else:
+            raise FileNotFoundError(pquery)
     
     @staticmethod
     def download_query(cmd: str):
@@ -103,10 +123,24 @@ class Finder:
         )
 
         if logname.is_file():
-            print(f"Log file created at:\n{logname}")
             self.logname = logname 
+            print(f"Log file created at:\n{self.logname}")
         else:
             raise FileNotFoundError(f"Log file was not created.")
+
+    def _get_source_duration(self) -> tuple[int]:
+        
+        ts: list[int] = [0]*2 
+        for i, s in enumerate(self._source_start_stop):
+            if s is None: continue 
+            ts[i] = int( str2td(s).total_seconds() )
+        
+        if ts[1] > 0: 
+            dur = ts[1] 
+        else:
+            dur, _ = sampling.get_video_duration(self.url)
+        
+        return ts[0], dur - ts[0] 
 
     def get_bins(
             self,
@@ -114,22 +148,24 @@ class Finder:
             binorder: str = 'mirrored',
             min_binwidth: int = 30,
             max_binwidth: int = 120,
-            clip_edges: int = 60, **binkwargs) -> None:
+            start_delta: int=0,
+            end_delta: int=0, 
+            **binkwargs) -> None:
 
-        dur_int, _ = sampling.get_video_duration(self.url)
+        start, dur_int = self._get_source_duration()
 
         bins_int = sampling.get_bins(
-            dur_int,
+            dur_int - end_delta,
             nbins=nbins,
             binorder=binorder,
             min_binwidth=min_binwidth,
             max_binwidth=max_binwidth,
-            clip_edges=clip_edges,
+            start_delta=start_delta + start,
             **binkwargs
         )
-
+        
         self._bins_str = sampling.bins2str(bins_int)
-        logging.debug(self._bins_str)
+        # logging.debug(self._bins_str)
 
     def run_ytdl(
             self,
